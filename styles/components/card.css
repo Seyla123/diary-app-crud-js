@@ -1,0 +1,65 @@
+/* card container */
+.card-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    color: #244586;
+}
+
+
+/* card date container */
+.card-date{
+    max-width: 250px;
+    width: 100%;
+    background-color: #FDFDFD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.card-date h1, .card-date h2, .card-date p{
+    margin: 0;
+    color: #767AE3;
+}
+.card-date h1 {
+    font-size: 36px;
+}
+.card-date h2 {
+    font-size: 14px;
+}
+.card-date p {
+    font-size: 12px;
+    color: #7B8DD2;
+}
+
+/* card container content */
+.card-content{
+    width: 100%;
+    background-color: #E2E7FA;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-content h1{
+    font-size: 24px;
+    margin: 0;
+
+}
+.card-content p{
+    font-size: 14px;
+    font-weight: 500;
+    color:black;
+    margin: 0;
+    line-height: 1.2rem;
+}
+
+/* card action container */
+.card-action{
+    max-width: 250px;
+    width: 100%;
+    background-color: #FDFDFD;
+}

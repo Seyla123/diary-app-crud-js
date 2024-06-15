@@ -30,6 +30,7 @@ main {
 
 /* Styles for the header */
 header {
+    background-color: #F9FAFB;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +46,7 @@ header {
 
 /* Styles for the border */
 .border {
-    background-color: #F9FAFB;
+
     border: 1px solid #ccc;
 }
 
@@ -54,5 +55,6 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 0px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
