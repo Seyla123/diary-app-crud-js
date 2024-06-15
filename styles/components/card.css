@@ -38,7 +38,7 @@
 /* card container content */
 .card-content{
     width: 100%;
-    background-color: #E2E7FA;
+    background-color: #F9FAFE;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -57,9 +57,32 @@
     line-height: 1.2rem;
 }
 
+
 /* card action container */
 .card-action{
     max-width: 250px;
     width: 100%;
     background-color: #FDFDFD;
+}
+.action-btn{
+    max-width: 40px;
+    width: 100%;
+
+}
+/*edit button */
+.action-btn .edit-btn {
+   fill: #767AE3;
+   transition-duration: 300ms;
+}
+.action-btn .edit-btn:hover {
+   fill: #1849A9;
+}
+
+/* delete button */
+.action-btn .delete-btn {
+   fill: #E31B54;
+   transition-duration: 300ms;
+}
+.action-btn .delete-btn:hover {
+   fill: #C01048;
 }
