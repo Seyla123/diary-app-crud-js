@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Import styles for the button component */
-@import url('./button.css');
+@import url('./components/button.css');
 
 /* Import styles for the input component */
-@import url('./input.css');
+@import url('./components/input.css');
 
 /* import styles for the card component*/
-@import url('./card.css');
+@import url('./components/card.css');
 
 /* Set the default font family to Public Sans */
 body {
