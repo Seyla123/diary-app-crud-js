@@ -1,3 +1,4 @@
+/*  Style for button */
 .btn   {
     transition-duration: 300ms;
     background-color: #244586;
@@ -9,7 +10,7 @@
     cursor: pointer;
     font-weight: bold;
 }
-
+/* change color background when hover */
 .btn:hover {
     background-color: #1849A9;
 }
