@@ -12,6 +12,9 @@
 
 /* Set the default font family to Public Sans */
 body {
+    width: 100%;
+    background-color: green;
+    transition-duration: 700ms;
     font-family: "Public Sans", sans-serif;
     margin: 0;
     padding: 0;
@@ -23,6 +26,7 @@ body {
 
 /* Set the maximum width of the main content area */
 main {
+    transition-duration:700ms;
     max-width: 1500px;
     margin: 0 auto;
     padding: 0px 20px ;
@@ -33,6 +37,8 @@ main {
 
 /* Styles for the header */
 header {
+    width: 100%;
+    text-wrap: nowrap;
     background-color: #F9FAFB;
     display: flex;
     justify-content: center;
@@ -45,13 +51,6 @@ header {
     font-size:  36px; 
     font-weight: bold;
 }
-@media screen and (max-width: 768px) {
-    .text-header {
-        font-size: 18px;
-    }
-}
-
-
 
 /* Styles for the border */
 .border {
@@ -59,5 +58,17 @@ header {
     border: 1px solid #ccc;
 }
 
+/* responsive for phone screen */
 
-
+/* Styles for the header text */
+@media screen and (max-width: 430px) {
+    .text-header {
+        font-size: 18px;
+    }
+    body{
+        gap: 15px;
+    }
+    main{
+        gap: 15px;
+    }
+}

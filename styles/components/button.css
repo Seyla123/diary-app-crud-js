@@ -14,3 +14,9 @@
 .btn:hover {
     background-color: #1849A9;
 }
+/* responsive for phone screen */
+@media screen and (max-width: 430px) {
+    .btn{
+        font-size: 10px;
+}
+}
