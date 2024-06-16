@@ -49,22 +49,22 @@
 }
 
 /*edit button */
-.action-btn .edit-btn {
+.action-btn .edit-icon {
     fill: #767AE3;
     transition-duration: 300ms;
 }
 /* hover for edit button */
-.action-btn .edit-btn:hover {
+.action-btn .edit-icon:hover {
     fill: #1849A9;
 }
 
 /* delete button */
-.action-btn .delete-btn {
+.action-btn .delete-icon {
     fill: #E31B54;
     transition-duration: 300ms;
 }
 /* hover for delete button */
-.action-btn .delete-btn:hover {
+.action-btn .delete-icon:hover {
     fill: #C01048;
 }
 
@@ -193,22 +193,22 @@ font-size: 16px;
     }
 
     /*edit button */
-    .action-btn .edit-btn {
+    .action-btn .edit-icon {
         fill: #767AE3;
         transition-duration: 300ms;
     }
 
-    .action-btn .edit-btn:hover {
+    .action-btn .edit-icon:hover {
         fill: #1849A9;
     }
 
     /* delete button */
-    .action-btn .delete-btn {
+    .action-btn .delete-icon {
         fill: #E31B54;
         transition-duration: 300ms;
     }
 
-    .action-btn .delete-btn:hover {
+    .action-btn .delete-icon:hover {
         fill: #C01048;
     }
 }
