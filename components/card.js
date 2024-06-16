@@ -45,7 +45,7 @@ const createCard = (id,title,content,date) => {
                 </div>
             </div>
             <div class="border card-content ">
-                <h1>S${title}</h1>
+                <h1>${title}</h1>
                 <p class="card-text-content">${content}</p>
             </div>
             <div class="border card-action ">
