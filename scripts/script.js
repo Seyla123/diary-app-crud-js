@@ -98,7 +98,7 @@ const updateEntry = (entry) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
   // Find the index of the entry with the given id
-  const index = entries.findIndex((item) => item.id === entry.id);
+  const index = entries.findIndex((item) => item.id == entry.id);
   if (index !== -1) {
     // Update the entry with the given id in the array
     entries[index] = entry;
