@@ -1,7 +1,7 @@
 /* card container */
-.card-container{
-    width: 100%;
+.card-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     font-size: 12px;
     font-weight: bold;
@@ -10,159 +10,188 @@
 
 
 /* card date container */
-.card-date{
-    max-width: 200px;
-    width: 100%;
-    background-color: #FDFDFD;
+.card-date {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    padding: 5px;
 }
-.card-date h1, .card-date h2, .card-date p{
+
+.card-date h1,
+.card-date h2 {
     margin: 0;
+    display: none;
     color: #767AE3;
 }
-.card-date h1 {
-    font-size: 48px;
-}
-.card-date h2 {
-    font-size: 14px;
-}
+
 .card-date p {
-    font-weight: 300;
+    margin: 0;
     font-size: 12px;
-    color: #7B8DD2;
+    color: #767AE3;
 }
 
-/* card container content */
-.card-content{
-    transition-duration: 300ms;
-    background-color: #F9FAFE;
-    padding: 20px;
+/* container of action button for small screen */
+.card-action-phone {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.card-content h1{
-    font-size: 24px;
-    margin: 0;
-
-}
-.card-content p{
-    font-size: 14px;
-    font-weight: 500;
-    color:black;
-    margin: 0;
-    line-height: 1.2rem;
 }
 
-
-/* card action container */
-.card-action{
-    max-width: 200px;
-    width: 100%;
-    background-color: #FDFDFD;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.action-btn {
+    max-width: 20px;
 }
-.action-btn{
-    max-width: 40px;
-    width: 100%;
 
-}
 /*edit button */
 .action-btn .edit-btn {
-   fill: #767AE3;
-   transition-duration: 300ms;
+    fill: #767AE3;
+    transition-duration: 300ms;
 }
+/* hover for edit button */
 .action-btn .edit-btn:hover {
-   fill: #1849A9;
+    fill: #1849A9;
 }
 
 /* delete button */
 .action-btn .delete-btn {
-   fill: #E31B54;
-   transition-duration: 300ms;
+    fill: #E31B54;
+    transition-duration: 300ms;
 }
+/* hover for delete button */
 .action-btn .delete-btn:hover {
-   fill: #C01048;
+    fill: #C01048;
 }
-/* card container action and date for phone screen */
-.card-action-phone{
+
+/* card content container*/
+.card-content h1 {
+    color: #1849A9;
+    font-size: 12px;
+    margin: 0;
+}
+.card-content p {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 0.7rem;
+    margin: 0;
+}
+
+.card-content {
+    gap: 5px;
+    padding: 5px;
+    transition-duration: 300ms;
+    background-color: #F9FAFE;
+    display: flex;
+    flex-direction: column;
+}
+
+/* hide card action for phone screen */
+.card-action {
     display: none;
 }
 
+@media screen and (min-width: 430px) {}
 
+@media screen and (min-width: 750px) {
 
-
-
-
-@media screen and (max-width: 750px) {
-    .card-container{
-        background-color: #767AE3;
-        flex-direction: column;
-    }
-    .card-date{
-        background-color: green;
-        flex-direction: row;
+    /* card container */
+    .card-container {
+        width: 100%;
+        display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 5px;
-    }
-    .card-action{
-        max-width: 100%;
-    }
-    .card-date h1{
-        display: none;
-    }
-    .card-date h2{
-        display: none;
-    }
-    .card-date p{
-        font-size: 16px;
+        font-size: 12px;
         font-weight: bold;
-        padding: 10px 0px;
+        color: #244586;
     }
-    .card-action{
-        display: none;
-    }
-    .card-action-phone{
-    display: flex;
-    
-}
-}
-/* responsive for phone screen */
-@media screen and (max-width: 430px) {
-    /* card date */
-    .card-date{
-        gap: 0px;
-    }
-    .card-date h1 {
-        font-size: 18px;
-    }
-    .card-date h2 {
-        font-size: 10px;
-    }
-    .card-date p{
-        font-size: 12px;
-    }
-    /* card content */
-    .card-content h1{
-        font-size: 12px;
-    }
-    .card-content p {
-        font-size: 8px;
-        line-height: 0.7rem;
-    }
-    .card-content{
+
+
+    /* card date container */
+    .card-date {
+        max-width: 200px;
+        width: 100%;
+        background-color: #FDFDFD;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 5px;
-        padding: 5px;
     }
-    .card-action-phone {
+
+    .card-date h1 {
+        font-size: 48px;
+    }
+
+    .card-date h2 {
+        font-size: 14px;
+    }
+
+    .card-date p {
+        font-weight: 300;
+        font-size: 12px;
+        color: #7B8DD2;
+    }
+
+    /* card container content */
+    .card-content {
+        transition-duration: 300ms;
+        background-color: #F9FAFE;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-content h1 {
+        font-size: 24px;
+        margin: 0;
+
+    }
+
+    .card-content p {
+        font-size: 14px;
+        font-weight: 500;
+        color: black;
+        margin: 0;
+        line-height: 1.2rem;
+    }
+
+
+    /* card action container */
+    .card-action {
+        max-width: 200px;
+        width: 100%;
+        background-color: #FDFDFD;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .action-btn {
         max-width: 40px;
+        width: 100%;
+
     }
+
+    /*edit button */
+    .action-btn .edit-btn {
+        fill: #767AE3;
+        transition-duration: 300ms;
+    }
+
+    .action-btn .edit-btn:hover {
+        fill: #1849A9;
+    }
+
+    /* delete button */
+    .action-btn .delete-btn {
+        fill: #E31B54;
+        transition-duration: 300ms;
+    }
+
+    .action-btn .delete-btn:hover {
+        fill: #C01048;
+    }
+
+    /* card container action and date for phone screen */
+    /* .card-action-phone{
+        display: none;
+    } */
 }
