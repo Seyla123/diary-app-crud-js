@@ -1,0 +1,214 @@
+#list-card {
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+}
+/* card container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    color: #244586;
+}
+
+
+/* card date container */
+.card-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.card-date h1,
+.card-date h2 {
+    margin: 0;
+    display: none;
+    color: #767AE3;
+}
+
+.card-date p {
+    margin: 0;
+    font-size: 10px;
+    color: #767AE3;
+}
+
+/* container of action button for small screen */
+.card-action-phone {
+    display: flex;
+}
+
+.action-btn {
+    min-width: 10px;
+    cursor: pointer;
+    max-width: 20px;
+}
+
+/*edit button */
+.action-btn .edit-icon {
+    fill: #767AE3;
+    transition-duration: 300ms;
+}
+/* hover for edit button */
+.action-btn .edit-icon:hover {
+    fill: #1849A9;
+}
+
+/* delete button */
+.action-btn .delete-icon {
+    fill: #E31B54;
+    transition-duration: 300ms;
+}
+/* hover for delete button */
+.action-btn .delete-icon:hover {
+    fill: #C01048;
+}
+
+/* card content container*/
+.card-content {
+    height: 100%;
+    gap: 5px;
+    padding: 5px;
+    transition-duration: 300ms;
+    background-color: #F9FAFE;
+    display: flex;
+    flex-direction: column;
+}
+.card-content h1 {
+    transition-duration: 300ms;
+    color: #1849A9;
+    font-size: 10px;
+    margin: 0;
+}
+.card-content p {
+    transition-duration: 300ms;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 0.7rem;
+    margin: 0;
+}
+/* hide card action for phone screen */
+.card-action {
+    display: none;
+}
+
+@media screen and (min-width: 430px) {
+.card-content h1 {
+font-size: 16px;
+}
+.card-content p {
+    font-size: 12px;
+    line-height: 0.9rem;
+}
+.card-date p {
+    font-size: 16px;
+}
+.action-btn {
+    max-width: 20px;
+}
+}
+
+@media screen and (min-width: 750px) {
+#list-card {
+    grid-template-columns: auto;
+    gap: 10px;
+}
+    /* hide action on big screen */
+    .card-action-phone{
+        display: none;
+    }
+    .card-date h1, .card-date h2{
+        display: block;
+    }
+    /* card container */
+    .card-container {
+        flex-direction: row;
+    }
+    /* card date container */
+    .card-date {
+        min-width: 100px;
+        max-width: 150px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-date h1 {
+        font-size: 36px;
+    }
+
+    .card-date h2 {
+        font-size: 14px;
+    }
+
+    .card-date p {
+        font-weight: 300;
+        font-size: 12px;
+        color: #7B8DD2;
+    }
+
+    /* card container content */
+    .card-content {
+        width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .card-content h1 {
+        font-size: 24px;
+        margin: 0;
+
+    }
+
+    .card-content p {
+        font-size: 14px;
+        font-weight: 500;
+        color: black;
+        margin: 0;
+        line-height: 1.2rem;
+    }
+
+
+    /* card action container */
+    .card-action {
+        min-width: 100px;
+        max-width: 150px;
+        width: 100%;
+        background-color: #FDFDFD;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .action-btn {
+        max-width: 30px;
+        width: 100%;
+
+    }
+
+    /*edit button */
+    .action-btn .edit-icon {
+        fill: #767AE3;
+        transition-duration: 300ms;
+    }
+
+    .action-btn .edit-icon:hover {
+        fill: #1849A9;
+    }
+
+    /* delete button */
+    .action-btn .delete-icon {
+        fill: #E31B54;
+        transition-duration: 300ms;
+    }
+
+    .action-btn .delete-icon:hover {
+        fill: #C01048;
+    }
+}
