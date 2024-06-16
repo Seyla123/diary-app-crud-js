@@ -37,6 +37,7 @@
 }
 
 .action-btn {
+    cursor: pointer;
     max-width: 20px;
 }
 
@@ -61,18 +62,6 @@
 }
 
 /* card content container*/
-.card-content h1 {
-    color: #1849A9;
-    font-size: 12px;
-    margin: 0;
-}
-.card-content p {
-    font-size: 8px;
-    font-weight: 400;
-    line-height: 0.7rem;
-    margin: 0;
-}
-
 .card-content {
     gap: 5px;
     padding: 5px;
@@ -81,37 +70,60 @@
     display: flex;
     flex-direction: column;
 }
-
+.card-content h1 {
+    transition-duration: 300ms;
+    color: #1849A9;
+    font-size: 12px;
+    margin: 0;
+}
+.card-content p {
+    transition-duration: 300ms;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 0.7rem;
+    margin: 0;
+}
 /* hide card action for phone screen */
 .card-action {
     display: none;
 }
 
-@media screen and (min-width: 430px) {}
+@media screen and (min-width: 430px) {
+.card-content h1 {
+font-size: 16px;
+}
+.card-content p {
+    font-size: 12px;
+    line-height: 0.9rem;
+}
+.card-date p {
+    font-size: 16px;
+}
+.action-btn {
+    max-width: 30px;
+}
+}
 
 @media screen and (min-width: 750px) {
-
+    /* hide action on big screen */
+    .card-action-phone{
+        display: none;
+    }
+    .card-date h1, .card-date h2{
+        display: block;
+    }
     /* card container */
     .card-container {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        font-size: 12px;
-        font-weight: bold;
-        color: #244586;
+        flex-direction: row;
     }
-
-
     /* card date container */
     .card-date {
+        min-width: 120px;
         max-width: 200px;
         width: 100%;
-        background-color: #FDFDFD;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 5px;
     }
 
     .card-date h1 {
@@ -155,6 +167,7 @@
 
     /* card action container */
     .card-action {
+        min-width: 120px;
         max-width: 200px;
         width: 100%;
         background-color: #FDFDFD;
@@ -189,9 +202,4 @@
     .action-btn .delete-btn:hover {
         fill: #C01048;
     }
-
-    /* card container action and date for phone screen */
-    /* .card-action-phone{
-        display: none;
-    } */
 }

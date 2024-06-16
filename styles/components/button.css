@@ -2,7 +2,7 @@
 .btn   {
     transition-duration: 300ms;
     background-color: #244586;
-    font-size:  12px; 
+    font-size:  10px; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -15,8 +15,8 @@
     background-color: #1849A9;
 }
 /* responsive for phone screen */
-@media screen and (max-width: 430px) {
+@media screen and (min-width: 430px) {
     .btn{
-        font-size: 10px;
+        font-size: 12px;
 }
 }

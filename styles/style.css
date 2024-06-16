@@ -20,21 +20,9 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 10px;
 }
 
-/* Set the maximum width of the main content area */
-main {
-    transition-duration:700ms;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0px 20px ;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-/* Styles for the header */
 header {
     text-wrap: nowrap;
     background-color: #F9FAFB;
@@ -42,31 +30,54 @@ header {
     justify-content: center;
     align-items: center;
 }
-/* Styles for the header text */
+
+main {
+    transition-duration: 700ms;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
 .text-header {
     transition-duration: 500ms;
     color: #1849A9;
-    font-size:  36px; 
+    font-size: 18px;
     font-weight: bold;
 }
 
+/* Set the maximum width of the main content area */
+
+
 /* Styles for the border */
 .border {
-
     border: 1px solid #ccc;
 }
 
-/* responsive for phone screen */
-
-/* Styles for the header text */
-@media screen and (max-width: 430px) {
-    .text-header {
-        font-size: 18px;
-    }
+@media screen and (min-width: 430px) {
     body{
-        gap: 15px;
+        gap:20px;
     }
-    main{
-        gap: 15px;
+    main {
+        transition-duration: 700ms;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Styles for the header */
+
+
+    /* Styles for the header text */
+    .text-header {
+        transition-duration: 500ms;
+        color: #1849A9;
+        font-size: 24px;
+        font-weight: bold;
     }
 }
