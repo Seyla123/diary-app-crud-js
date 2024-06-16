@@ -1,3 +1,5 @@
+import { createCard } from "../components/card.js";
+
 const updateEntry = (id) => {
     console.log('update', id);
 }
@@ -23,4 +25,7 @@ const arr = [{
     content: 'lorem ipsum dolor sit amet',
     date: '1/1/2021',
 }]
+
 const containerListCard = document.querySelector('#list-card');
+
+console.log(createCard(arr[0].id, arr[0].title, arr[0].content, arr[0].date));

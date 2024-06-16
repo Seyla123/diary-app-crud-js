@@ -53,4 +53,4 @@ const createCard = (id,title,content,date) => {
         </div>
     `
 }
-export default createCard;
+export {createCard};
