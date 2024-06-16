@@ -11,6 +11,7 @@
 @import url('./components/card.css');
 /* Reset some default browser styles */
 * {
+ font-family: "Public Sans", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,10 +20,6 @@
 body {
     width: 100%;
     transition-duration: 700ms;
-    font-family: "Public Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 10px;

@@ -1,13 +1,26 @@
+//function to find day of the week
+let dayNumber;
+const findDayOfWeek=(dateString)=> {
+    // Split the input date string into an array [day, month, year]
+    const dateParts = dateString.split('-');
+    
+    // Parse the day, month, and year from the dateParts array
+    const year = parseInt(dateParts[0], 10); // Converts the day part to an integer
+    const month = parseInt(dateParts[1], 10) - 1; // Converts the month part to an integer and subtracts 1 because months are zero-based
+    const day = parseInt(dateParts[2], 10); // Converts the year part to an integer
+    dayNumber = day;
+    // Create a new Date object with the parsed day, month, and year
+    const date = new Date(day, month,year );
+  
+    // Array to map the day of the week number to the day name
+    const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FR', 'SAT'];
+   // getDay() returns a number from 0 to 6, where 0 is Sunday and 6 is Saturday
+    return daysOfWeek[date.getDay()]; 
+  }
 
-/**
- * Creates a card element for a diary entry with the given id, title, content, and date.
- * @param {string} id - The id of the entry.
- * @param {string} title - The title of the entry.
- * @param {string} content - The content of the entry.
- * @param {string} date - The date of the entry.
- * @returns {string} - The HTML code for the card element.
- */
+// Creates a card element for a diary entry with the given id, title, content, and date.
 const createCard = (id, title, content, date) => {
+    const dayOfWeek = findDayOfWeek(date);
   // Function to create action button
   const createActionButton = (id) => {
     return `
@@ -44,8 +57,8 @@ const createCard = (id, title, content, date) => {
     <div class=" border card-container">
         <!-- Date and action buttons container -->
         <div class="border card-date">
-            <h1>14</h1>
-            <h2>FRI</h2>
+            <h1>${dayNumber}</h1>
+            <h2>${dayOfWeek}</h2>
             <div>
                 <p>${date}</p>
             </div>

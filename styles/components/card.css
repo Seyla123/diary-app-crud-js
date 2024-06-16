@@ -73,6 +73,9 @@
 
 /* card content container*/
 .card-content {
+    max-height: 100px;
+    overflow: hidden;
+    position: relative;
     height: 100%;
     gap: 5px;
     padding: 5px;
@@ -124,12 +127,14 @@
 @media screen and (min-width: 750px) {
     #list-card {
         grid-template-columns: auto;
-        gap: 10px;
+        gap: 5px;
     }
 
     /* card container */
     .card-container {
         flex-direction: row;
+
+        
     }
 
     /* hide action on big screen */
@@ -168,6 +173,7 @@
 
     /* card container content */
     .card-content {
+        max-height: 200px;
         width: 100%;
         padding: 20px;
         gap: 10px;

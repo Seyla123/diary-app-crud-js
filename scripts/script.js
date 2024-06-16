@@ -1,4 +1,7 @@
+'use strict';
 import { createCard } from "../components/card.js";
+
+
 
 // function for delete data entry
 const deleteEntry = (id) => {
@@ -79,13 +82,10 @@ const editEntry = (id) => {
   if (index !== -1) {
     // Get the entry with the given id
     const entry = entries[index];
-    // Set the id input value to the id of the entry
+    // Set the input value to form the entry
     document.querySelector("#id").value = entry.id;
-    // Set the title input value to the title of the entry
     document.querySelector("#title").value = entry.title;
-    // Set the content input value to the content of the entry
     document.querySelector("#content").value = entry.content;
-    // Set the date input value to the date of the entry
     document.querySelector("#date").value = entry.date;
   }
 };
@@ -98,7 +98,7 @@ const updateEntry = (entry) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
   // Find the index of the entry with the given id
-  const index = entries.findIndex((item) => item.id === entry.id);
+  const index = entries.findIndex((item) => item.id == entry.id);
   if (index !== -1) {
     // Update the entry with the given id in the array
     entries[index] = entry;
