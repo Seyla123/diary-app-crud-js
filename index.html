@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diary Web Application</title>
     <!-- CSS Link -->
-     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <!-- header -->
-    <header class="text-header container border">
-        <p>Diary Application</p>
-    </header>
+    <header-component></header-component>
+    <!-- main -->
     <main>
+        <!-- form -->
         <form action="" class="form">
+            <!-- id for submit button -->
+            <input type="hidden" name="id" id="id" >
             <!-- input title -->
             <input class="input border" type="text" name="title" id="title" placeholder="input your title here">
             <!-- input content -->
@@ -22,16 +24,21 @@
              <input class="border input" type="date" name="date" id="date">
             <!-- button -->
             <div class="container-btn">
-                <button class="btn">Add Entry</button>
+                <button type="submit" class="btn">Add Entry</button>
             </div>
         </form>
+        <!-- list card entry container -->
         <section id="list-card">
-            
-            
+             <!--card entry render here  -->
         </section>
     </main>
     <!-- footer -->
-    <footer>Seav Seyla</footer>
+     <footer-component></footer-component>
 </body>
+<!-- header link -->
+<script src="./components/header.js"></script>
+<!-- footer link -->
+<script src="./components/footer.js"></script>
+<!-- script -->
 <script type="module" src="./scripts/script.js"></script>
 </html>
