@@ -1,9 +1,10 @@
 
 const createCard = (id,title,content,date) => {
     // create action button 
+    
     const createActionButton = (id) => {
         return `
-                        <div onclick="updateEntry(${id})" class="action-btn">
+                        <button onclick="updateEntry(1)" class="action-btn">
                              <svg class="edit-btn" width="100%" height="100%" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <g clip-path="url(#clip0_10_5491)">
                                  <path d="M6.25 35.9374V43.7499H14.0625L37.1042 20.7083L29.2917 12.8958L6.25 35.9374Z" />
@@ -15,7 +16,7 @@ const createCard = (id,title,content,date) => {
                                  </clipPath>
                                  </defs>
                              </svg>
-                         </div>
+                         </button>
                          <div onclick="deleteEntry(${id})" class="action-btn">
                              <svg class="delete-btn" width="100%" height="100%"  viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <g clip-path="url(#clip0_10_5502)">

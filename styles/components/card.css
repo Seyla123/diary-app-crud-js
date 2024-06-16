@@ -1,3 +1,9 @@
+#list-card {
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+}
 /* card container */
 .card-container {
     display: flex;
@@ -27,7 +33,7 @@
 
 .card-date p {
     margin: 0;
-    font-size: 12px;
+    font-size: 10px;
     color: #767AE3;
 }
 
@@ -37,6 +43,7 @@
 }
 
 .action-btn {
+    min-width: 10px;
     cursor: pointer;
     max-width: 20px;
 }
@@ -63,6 +70,7 @@
 
 /* card content container*/
 .card-content {
+    height: 100%;
     gap: 5px;
     padding: 5px;
     transition-duration: 300ms;
@@ -73,12 +81,12 @@
 .card-content h1 {
     transition-duration: 300ms;
     color: #1849A9;
-    font-size: 12px;
+    font-size: 10px;
     margin: 0;
 }
 .card-content p {
     transition-duration: 300ms;
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 400;
     line-height: 0.7rem;
     margin: 0;
@@ -100,11 +108,15 @@ font-size: 16px;
     font-size: 16px;
 }
 .action-btn {
-    max-width: 30px;
+    max-width: 20px;
 }
 }
 
 @media screen and (min-width: 750px) {
+#list-card {
+    grid-template-columns: auto;
+    gap: 10px;
+}
     /* hide action on big screen */
     .card-action-phone{
         display: none;
@@ -118,8 +130,8 @@ font-size: 16px;
     }
     /* card date container */
     .card-date {
-        min-width: 120px;
-        max-width: 200px;
+        min-width: 100px;
+        max-width: 150px;
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -127,7 +139,7 @@ font-size: 16px;
     }
 
     .card-date h1 {
-        font-size: 48px;
+        font-size: 36px;
     }
 
     .card-date h2 {
@@ -142,11 +154,8 @@ font-size: 16px;
 
     /* card container content */
     .card-content {
-        transition-duration: 300ms;
-        background-color: #F9FAFE;
+        width: 100%;
         padding: 20px;
-        display: flex;
-        flex-direction: column;
         gap: 10px;
     }
 
@@ -167,8 +176,8 @@ font-size: 16px;
 
     /* card action container */
     .card-action {
-        min-width: 120px;
-        max-width: 200px;
+        min-width: 100px;
+        max-width: 150px;
         width: 100%;
         background-color: #FDFDFD;
         display: flex;
@@ -178,7 +187,7 @@ font-size: 16px;
     }
 
     .action-btn {
-        max-width: 40px;
+        max-width: 30px;
         width: 100%;
 
     }
