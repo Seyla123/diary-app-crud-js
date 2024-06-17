@@ -14,6 +14,7 @@
     font-size: 12px;
     font-weight: bold;
     color: #244586;
+    border: 1px solid #ccc;
 }
 
 /* card date container */
@@ -23,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    border-bottom: 1px solid #ccc;
 }
 /* hide h1, h2 on big screen */
 .card-date h1,
@@ -103,6 +105,7 @@
 /* hide card action for phone screen */
 .card-action {
     display: none;
+    border-left:1px solid #ccc ;
 }
 
 @media screen and (min-width: 430px) {
@@ -133,8 +136,6 @@
     /* card container */
     .card-container {
         flex-direction: row;
-
-        
     }
 
     /* hide action on big screen */
@@ -155,6 +156,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-right:1px solid #ccc ;
+        border-bottom: none;
     }
 
     .card-date h1 {

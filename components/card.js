@@ -54,9 +54,9 @@ const createCard = (id, title, content, date) => {
 
   return `
     <!-- Card element for diary entry -->
-    <div class=" border card-container">
+    <div class="card-container">
         <!-- Date and action buttons container -->
-        <div class="border card-date">
+        <div class="card-date">
             <h1>${dayNumber}</h1>
             <h2>${dayOfWeek}</h2>
             <div>
@@ -67,12 +67,12 @@ const createCard = (id, title, content, date) => {
             </div>
         </div>
         <!-- Content container -->
-        <div class="border card-content ">
+        <div class="card-content ">
             <h1>${title}</h1>
             <p class="card-text-content">${content}</p>
         </div>
         <!-- Action button container for big screens -->
-        <div class="border card-action ">
+        <div class=" card-action ">
            ${createActionButton(id)}
         </div>
     </div>
