@@ -26,8 +26,9 @@ body {
 }
 
 header {
+    background-image: url('../assets/background.jpg');
     text-wrap: nowrap;
-    padding:10px 0 ;
+    padding:40px 0 ;
     background-color: #F9FAFB;
     display: flex;
     justify-content: center;
@@ -70,7 +71,7 @@ button {
     }
        /* Styles for the header */
     header{
-        padding:20px 0 ;
+        padding:100px 0 ;
     }
     /* Styles for the header text */
     .text-header {
