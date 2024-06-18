@@ -53,7 +53,6 @@ const createCard = (id, title, content, date) => {
   }
 
   return `
-    <!-- Card element for diary entry -->
     <div class="card-container">
         <!-- Date and action buttons container -->
         <div class="card-date">
