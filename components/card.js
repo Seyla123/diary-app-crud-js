@@ -37,7 +37,7 @@ const createCard = (id, title, content, date) => {
                     </defs>
                 </svg>
             </button>
-            <button onclick="window.deleteEntry(${id})" class="action-btn">
+            <button onclick="window.deleteEntry(${id})" class="action-btn" >
                 <svg class="delete-icon" width="100%" height="100%"  viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_10_5502)">
                     <path d="M12.4998 39.5833C12.4998 41.875 14.3748 43.75 16.6665 43.75H33.3332C35.6248 43.75 37.4998 41.875 37.4998 39.5833V14.5833H12.4998V39.5833ZM17.6248 24.75L20.5623 21.8125L24.9998 26.2292L29.4165 21.8125L32.354 24.75L27.9373 29.1667L32.354 33.5833L29.4165 36.5208L24.9998 32.1042L20.5832 36.5208L17.6457 33.5833L22.0623 29.1667L17.6248 24.75ZM32.2915 8.33333L30.2082 6.25H19.7915L17.7082 8.33333H10.4165V12.5H39.5832V8.33333H32.2915Z" />

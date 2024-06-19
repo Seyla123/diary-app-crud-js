@@ -15,18 +15,31 @@
         <!-- form -->
         <form action="" class="form">
             <!-- id for submit button -->
-            <input type="hidden" name="id" id="id" >
+            <input type="hidden" name="id" id="id" required >
             <!-- input title -->
-            <input class="input border" type="text" name="title" id="title" placeholder="input your title here">
+            <input class="input border" type="text" name="title" id="title" placeholder="input your title here" required>
             <!-- input content -->
-            <textarea class="border input" name="content" id="content" placeholder="input your content here" rows="10"></textarea>
+            <textarea class="border input" name="content" id="content" placeholder="input your content here" rows="10" required></textarea>
             <!-- input date -->
-             <input class="border input" type="date" name="date" id="date">
+             <input class="border input" type="date" name="date" id="date" required>
             <!-- button -->
             <div class="container-btn">
                 <button type="submit" class="btn">Add Entry</button>
             </div>
         </form>
+        <button id="deleteButton">Delete Entry</button>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="./assets//Delete letter.svg" alt="Delete Icon" class="modal-img">
+            <p>Do you really want to delete this ?</p>
+            <div class="modal-buttons">
+                <button id="cancelButton">No</button>
+                <button id="confirmButton" class="confirm">Yes, delete</button>
+            </div>
+        </div>
+    </div>
         <!-- list card entry container -->
         <section id="list-card">
              <!--card entry render here  -->
