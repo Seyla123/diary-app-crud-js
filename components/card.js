@@ -17,10 +17,18 @@ const findDayOfWeek=(dateString)=> {
    // getDay() returns a number from 0 to 6, where 0 is Sunday and 6 is Saturday
     return daysOfWeek[date.getDay()]; 
   }
-
+    // Function to truncate text
+    function truncateText(text) {
+        const maxLength = 1000
+        if (text.length <= maxLength) {
+        return text;
+        }
+        return text.slice(0, maxLength) + '...';
+    }
 // Creates a card element for a diary entry with the given id, title, content, and date.
 const createCard = (id, title, content, date) => {
     const dayOfWeek = findDayOfWeek(date);
+
   // Function to create action button
   const createActionButton = (id) => {
     return `
@@ -68,7 +76,7 @@ const createCard = (id, title, content, date) => {
         <!-- Content container -->
         <div class="card-content ">
             <h1>${title}</h1>
-            <p class="card-text-content">${content}</p>
+            <p class="card-text-content">${truncateText(content)}</p>
         </div>
         <!-- Action button container for big screens -->
         <div class=" card-action ">
