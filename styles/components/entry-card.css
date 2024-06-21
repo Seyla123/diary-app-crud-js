@@ -1,0 +1,37 @@
+
+/* container of list card */
+.container-list{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 5px;
+}
+/* entry card container */
+.container-entry{
+    background-color:var(--white-color);
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: rows;
+    gap: 5px;
+
+    border: 1px solid var(--border-color);
+}
+/* container of title and date */
+.container-title{
+    display: flex;
+    justify-content: space-between;
+}
+.entry-title{
+    color:var(--title-color);
+}
+.entry-date{
+    color:#515151;
+}
+.entry-content{
+    height: 100px;
+    overflow: hidden;
+    padding: 10px 0;
+    line-height: 0.8rem;
+}

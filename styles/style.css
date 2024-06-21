@@ -9,6 +9,18 @@
 
 /* import styles for the card component*/
 @import url('./components/card.css');
+
+/* import styles for the Entry Card */
+@import url('./components/entry-card.css');
+
+/* global varaible */
+:root{
+    --purple-color : #767AE3;
+    --background-color : #F9FAFE;
+    --white-color : #FFFFFF;
+    --title-color :#2D31A6;
+    --border-color :#ccc;
+}
 /* Reset some default browser styles */
 * {
  font-family: "Public Sans", sans-serif;
@@ -21,15 +33,14 @@ body {
     width: 100%;
     transition-duration: 700ms;
     display: flex;
+    background-color: var(--background-color);
     flex-direction: column;
     gap: 10px;
 }
 
 header {
     background-image: url('../assets/background.jpg');
-    text-wrap: nowrap;
     padding:40px 0 ;
-    background-color: #F9FAFB;
     display: flex;
     justify-content: center;
     align-items: center;

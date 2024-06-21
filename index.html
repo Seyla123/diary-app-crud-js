@@ -1,57 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diary Web Application</title>
     <!-- CSS Link -->
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <!-- header -->
     <header-component></header-component>
     <!-- main -->
     <main>
-        <!-- form -->
-        <form action="" class="form">
-            <!-- id for submit button -->
-            <input type="hidden" name="id" id="id" required >
-            <!-- input title -->
-            <input class="input border" type="text" name="title" id="title" placeholder="input your title here" required>
-            <!-- input content -->
-            <textarea class="border input" name="content" id="content" placeholder="input your content here" rows="10" required></textarea>
-            <!-- input date -->
-             <input class="border input" type="date" name="date" id="date" required>
-            <!-- button -->
-            <div class="container-btn">
-                <button type="submit" class="btn">Add Entry</button>
-            </div>
-        </form>
-        <button id="deleteButton">Delete Entry</button>
-
-    <div id="deleteModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img src="./assets//Delete letter.svg" alt="Delete Icon" class="modal-img">
-            <p>Do you really want to delete this ?</p>
-            <div class="modal-buttons">
-                <button id="cancelButton">No</button>
-                <button id="confirmButton" class="confirm">Yes, delete</button>
-            </div>
+      <!-- form -->
+      <form action="" class="form">
+        <!-- id for submit button -->
+        <input type="hidden" name="id" id="id" required />
+        <!-- input title -->
+        <span>Title :</span>
+        <input
+          class="input border"
+          type="text"
+          name="title"
+          id="title"
+          placeholder="input your title here"
+          required
+        />
+        <!-- input content -->
+        <span>Content :</span>
+        <textarea
+          class="border input"
+          name="content"
+          id="content"
+          placeholder="input your content here"
+          rows="10"
+          required
+        ></textarea>
+        <!-- input date -->
+        <input
+          class="border input"
+          type="date"
+          name="date"
+          id="date"
+          required
+        />
+        <!--submit button -->
+        <div class="container-btn">
+          <button type="submit" class="btn">Add Entry</button>
         </div>
-    </div>
-        <!-- list card entry container -->
-        <section id="list-card">
-             <!--card entry render here  -->
-        </section>
+      </form>
+
+      <div id="deleteModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img
+            src="./assets//Delete letter.svg"
+            alt="Delete Icon"
+            class="modal-img"
+          />
+          <p>Do you really want to delete this ?</p>
+          <div class="modal-buttons">
+            <button id="cancelButton">No</button>
+            <button id="confirmButton" class="confirm">Yes, delete</button>
+          </div>
+        </div>
+      </div>
+      <section class="container-list">
+
+        <!--card entry render here  -->
+        <div class="container-entry">
+          <div class="content-entry">
+            <div class="container-title">
+              <h3 class="entry-title">Something to do</h3>
+              <p class="entry-date">16/06/2024</p>
+            </div>
+            <div class="entry-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero
+              laborum veniam rerum consequuntur ducimus eum sequi, vel,
+              cupiditate soluta voluptas ea eos exercitationem unde harum. Sequi
+              cum quod voluptas.
+            </div>
+          </div>
+          <div class="container-btn-entry">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn" id="deleteButton">Delete</button>
+          </div>
+        </div>
+      </section>
+      <!-- list card entry container -->
+      <section id="list-card"></section>
     </main>
     <!-- footer -->
-     <footer-component></footer-component>
-</body>
-<!-- header link -->
-<script src="./components/header.js"></script>
-<!-- footer link -->
-<script src="./components/footer.js"></script>
-<!-- script -->
-<script type="module" src="./scripts/script.js"></script>
+    <footer-component></footer-component>
+  </body>
+  <!-- header link -->
+  <script src="./components/header.js"></script>
+  <!-- footer link -->
+  <script src="./components/footer.js"></script>
+  <!-- script -->
+  <script type="module" src="./scripts/script.js"></script>
 </html>
