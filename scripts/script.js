@@ -1,6 +1,6 @@
 'use strict';
 import { createCard } from "../components/card.js";
-
+import './deleleModal.js'
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
@@ -116,34 +116,3 @@ window.updateEntry = editEntry;
 window.deleteEntry = deleteEntry;
 // script.js
 
-document.addEventListener('DOMContentLoaded', () => {
-  const deleteButton = document.getElementById('deleteButton');
-  const deleteModal = document.getElementById('deleteModal');
-  const closeButton = document.querySelector('.close');
-  const cancelButton = document.getElementById('cancelButton');
-  const confirmButton = document.getElementById('confirmButton');
-
-  deleteButton.addEventListener('click', () => {
-      deleteModal.style.display = 'block';
-  });
-
-  closeButton.addEventListener('click', () => {
-      deleteModal.style.display = 'none';
-  });
-
-  cancelButton.addEventListener('click', () => {
-      deleteModal.style.display = 'none';
-  });
-
-  confirmButton.addEventListener('click', () => {
-      // Add your delete logic here
-      alert('Entry deleted!');
-      deleteModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-      if (event.target == deleteModal) {
-          deleteModal.style.display = 'none';
-      }
-  });
-});
