@@ -16,7 +16,7 @@
     font-family: "Public Sans", sans-serif;
     padding: 10px;
     border-radius: 4px;
-    background-color: #F9FAFB;
+    background-color: var(--white-color);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;

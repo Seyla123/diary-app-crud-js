@@ -9,13 +9,11 @@
 /* entry card container */
 .container-entry{
     background-color:var(--white-color);
-
     font-size: 10px;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
-    flex-direction: rows;
-    gap: 5px;
+    gap: 10px;
     border: 1px solid var(--border-color);
 }
 /* ccontainer of title ,date and content text */
@@ -28,6 +26,7 @@
 /* container of title and date */
 .container-title{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 /* title color */
@@ -48,8 +47,16 @@
 /* container button action */
 .container-btn-entry{
     display: flex;
+    gap: 5px;
     flex-direction: column;
     justify-content: center;
+}
+/* edit button */
+.edit-btn svg{
+    fill : var(--purple-color);
+}
+.edit-btn svg:hover{
+    fill: var(--purple-color);
 }
 .delete-btn svg{
    fill:var(--red-color);
