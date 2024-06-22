@@ -33,9 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       deleteModal.style.display = "none";
       document.body.style.overflow = "auto";
       deleteEntry(deleteId);
-      
       deleteId = null;
-
     } else {
       console.log("Please select an entry to delete");
     }
