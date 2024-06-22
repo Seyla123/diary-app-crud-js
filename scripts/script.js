@@ -18,7 +18,19 @@ let editMode = false;
 const btnSubmit = document.querySelector(".form button");
 const containerListCard = document.querySelector("#list-card");
 const form = document.querySelector(".form");
-
+const toggleUpdateMode = () => {
+  if(editMode){
+    const updateCancel = document.querySelector("#updateCancel");
+    updateCancel.style.display = "block";
+    const form = document.querySelector(".form");
+    btnSubmit.innerHTML = "Update";
+    updateCancel.addEventListener("click", () => {
+      editMode = false;
+      form.reset();
+      updateCancel.style.display = "none";
+    });
+  }
+}
 // function add entry
 const addEntry = (entry) => {
   // Parse the entries from local storage, or create an empty array if no entries exist.
@@ -74,7 +86,7 @@ const editEntry = (id) => {
   // Set edit mode to true
   editMode = true;
   // Change the submit button text to 'Update'
-  btnSubmit.innerHTML = "Update";
+  toggleUpdateMode()
   // Find the index of the entry with the given id
   const index = entries.findIndex((item) => item.id == id);
   if (index !== -1) {

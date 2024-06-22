@@ -25,9 +25,17 @@
     font-weight: bold;
     border : 1px #6064D9 solid;
 }
+/* update cancel button */
+#updateCancel{
+    display: none;
+}
+.container-btn{
+    display: flex;
+    gap: 10px;
+}
 /* responsive for phone screen */
 @media screen and (min-width: 430px) {
     .btn{
-        font-size: 12px;
+    font-size: 12px;
 }
 }
