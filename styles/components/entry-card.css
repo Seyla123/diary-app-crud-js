@@ -9,29 +9,46 @@
 /* entry card container */
 .container-entry{
     background-color:var(--white-color);
+
     font-size: 10px;
     padding: 10px;
     border-radius: 15px;
     display: flex;
     flex-direction: rows;
     gap: 5px;
-
     border: 1px solid var(--border-color);
+}
+/* ccontainer of title ,date and content text */
+.content-entry{
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
 }
 /* container of title and date */
 .container-title{
     display: flex;
     justify-content: space-between;
 }
+/* title color */
 .entry-title{
     color:var(--title-color);
 }
+/* date color */
 .entry-date{
     color:#515151;
 }
+/* text content */
 .entry-content{
-    height: 100px;
+    height: 60px;
     overflow: hidden;
-    padding: 10px 0;
-    line-height: 0.8rem;
+    line-height: 0.9rem;
+}
+
+/* container button action */
+.container-btn-entry{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: green;
 }
