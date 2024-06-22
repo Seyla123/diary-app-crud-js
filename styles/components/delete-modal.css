@@ -1,5 +1,5 @@
 .modal {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -41,7 +41,10 @@
     text-decoration: none;
     cursor: pointer;
 }
-
+.modal-header{
+    display : flex;
+    jus
+}
 .modal-buttons {
     display: flex;
     justify-content: space-between;

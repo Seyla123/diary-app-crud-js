@@ -7,7 +7,6 @@ class Button extends HTMLElement{
     constructor(){
         super();
     }
-
     connectedCallback(){
     const title = this.getAttribute('title');
     const type = this.getAttribute('type') || "";
