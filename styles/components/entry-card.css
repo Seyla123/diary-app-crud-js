@@ -50,5 +50,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: green;
+}
+.delete-btn svg{
+   fill:var(--red-color);
+}
+.delete-btn svg:hover{
+    fill:var(--red-color-danger);
 }
