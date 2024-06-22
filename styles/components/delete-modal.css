@@ -1,3 +1,4 @@
+/* modal container */
 .modal {
     position: fixed;
     z-index: 1;
@@ -7,9 +8,20 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Vertically center content */
+    display: none; 
+    align-items: center; 
     justify-content: center
+}
+/* content container */
+.modal-content {
+    transition-duration: 300ms;
+    background-color: var(--purple-color-light);
+    margin: 15% auto;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
 }
 .modal-img-container{
     width: 100%;
@@ -22,34 +34,13 @@
     text-align: center;
     font-weight: 600;
 }
-.modal-content {
-    background-color: var(--purple-color-light);
-    margin: 15% auto;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    border-radius: 10px;
-    position: relative;
-}
-
 .modal-img {
+    transition-duration: 300ms;
     width: 150px;
     height: 150px;
     margin-bottom: 20px;
 }
-
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
     cursor: pointer;
 }
 .modal-header{
@@ -62,4 +53,23 @@
     justify-content: end;
     gap: 10px;
     padding: 10px;
+}
+
+@media screen and (min-width: 430px) {
+    .modal-content{
+        width: 350px;
+    }
+    .modal-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (min-width: 750px) {
+    .modal-content{
+        width: 400px;
+    }
+    .modal-img {
+        width: 250px;
+        height: 250px;
+    }
 }

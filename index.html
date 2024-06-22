@@ -46,40 +46,24 @@
         />
         <!--submit button -->
         <div class="container-btn">
-          <my-button title = "Add Entry" type="submit" class="text-button" ></my-button>
+          <my-button
+            title="Add Entry"
+            type="submit"
+            class="text-button"
+          ></my-button>
         </div>
       </form>
 
-      <div id="deleteModal" class="modal">
-        <div class="modal-content">
-          <div class="modal-container">
-            <span class="close">
-              <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.5001 0.916504C7.4355 0.916504 0.916748 7.43525 0.916748 15.4998C0.916748 23.5644 7.4355 30.0832 15.5001 30.0832C23.5647 30.0832 30.0834 23.5644 30.0834 15.4998C30.0834 7.43525 23.5647 0.916504 15.5001 0.916504ZM22.7917 20.7353L20.7355 22.7915L15.5001 17.5561L10.2647 22.7915L8.20841 20.7353L13.4438 15.4998L8.20841 10.2644L10.2647 8.20817L15.5001 13.4436L20.7355 8.20817L22.7917 10.2644L17.5563 15.4998L22.7917 20.7353Z" fill="#767AE3"/>
-                </svg>
-            </span>
-          </div>
-         <div class="modal-img-container">
-          <img
-          src="./assets/g8.svg"
-          alt="Delete Icon"
-          class="modal-img"
-        />
-        <p>Do you really want to delete this ?</p>
-         </div>
-          <div class="modal-container btn-modal-container">
-            <button id="cancelButton" class="btn-primary-100">No</button>
-            <my-button 
-            id="confirmButton" 
-            title="Yes, delete"
-            ></my-button>
-          </div>
-        </div>
-      </div>
-      
       <section class="container-list">
         <!--card entry render here  -->
         <div class="container-entry">
+          
+          <div class="entry-date-container">
+            <h1>14</h1>
+            <h2>FRI</h2>
+            <p>16/Jun/2024</p>
+            
+           </div>
           <div class="content-entry">
             <div class="container-title">
               <h3 class="entry-title">Something to do</h3>
@@ -89,40 +73,53 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero
               laborum veniam rerum consequuntur ducimus eum sequi, vel,
               cupiditate soluta voluptas ea eos exercitationem unde harum. Sequi
-              cum quod voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero
-              laborum veniam rerum consequuntur ducimus eum sequi, vel,
-              cupiditate soluta voluptas ea eos exercitationem unde harum. Sequi
-              cum quod voluptas.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero
-              laborum veniam rerum consequuntur ducimus eum sequi, vel,
-              cupiditate soluta voluptas ea eos exercitationem unde harum. Sequi
-              cum quod voluptas.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero
-              laborum veniam rerum consequuntur ducimus eum sequi, vel,
-              cupiditate soluta voluptas ea eos exercitationem unde harum. Sequi
-              cum quod voluptas.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero
-              laborum veniam rerum consequuntur ducimus eum sequi, vel,
-              cupiditate soluta voluptas ea eos exercitationem unde harum. Sequi
-              cum quod voluptas.
-
-
+              cum quod voluptas. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Nemo vero laborum veniam rerum consequuntur
+              ducimus eum sequi, vel, cupiditate soluta voluptas ea eos
+              exercitationem unde harum. Sequi cum quod voluptas. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Nemo vero laborum
+              veniam rerum consequuntur ducimus eum sequi, vel, cupiditate
+              soluta uod voluptas. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Nemo vero laborum veniam rerum consequuntur
+              ducimus eum sequi, vel, cupiditate soluta voluptas ea eos
+              exercitationem unde harum. Sequi cum quod voluptas.
             </div>
           </div>
           <div class="container-btn-entry">
             <button class="edit-btn">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3084 0.741797L15.2584 2.6918C15.5834 3.0168 15.5834 3.5418 15.2584 3.8668L13.7334 5.3918L10.6084 2.2668L12.1334 0.741797C12.4584 0.416797 12.9834 0.416797 13.3084 0.741797ZM0.5 15.4999V12.3749L9.71667 3.1582L12.8417 6.2832L3.625 15.4999H0.5Z" />
-                </svg>                
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.3084 0.741797L15.2584 2.6918C15.5834 3.0168 15.5834 3.5418 15.2584 3.8668L13.7334 5.3918L10.6084 2.2668L12.1334 0.741797C12.4584 0.416797 12.9834 0.416797 13.3084 0.741797ZM0.5 15.4999V12.3749L9.71667 3.1582L12.8417 6.2832L3.625 15.4999H0.5Z"
+                />
+              </svg>
             </button>
             <button class="delete-btn" id="deleteButton">
-              <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.49984 13.8333C1.49984 14.75 2.24984 15.5 3.1665 15.5H9.83317C10.7498 15.5 11.4998 14.75 11.4998 13.8333V3.83333H1.49984V13.8333ZM3.54984 7.9L4.72484 6.725L6.49984 8.49167L8.2665 6.725L9.4415 7.9L7.67484 9.66667L9.4415 11.4333L8.2665 12.6083L6.49984 10.8417L4.73317 12.6083L3.55817 11.4333L5.32484 9.66667L3.54984 7.9ZM9.4165 1.33333L8.58317 0.5H4.4165L3.58317 1.33333H0.666504V3H12.3332V1.33333H9.4165Z" />
-              </svg>                
+              <svg
+                width="13"
+                height="16"
+                viewBox="0 0 13 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.49984 13.8333C1.49984 14.75 2.24984 15.5 3.1665 15.5H9.83317C10.7498 15.5 11.4998 14.75 11.4998 13.8333V3.83333H1.49984V13.8333ZM3.54984 7.9L4.72484 6.725L6.49984 8.49167L8.2665 6.725L9.4415 7.9L7.67484 9.66667L9.4415 11.4333L8.2665 12.6083L6.49984 10.8417L4.73317 12.6083L3.55817 11.4333L5.32484 9.66667L3.54984 7.9ZM9.4165 1.33333L8.58317 0.5H4.4165L3.58317 1.33333H0.666504V3H12.3332V1.33333H9.4165Z"
+                />
+              </svg>
             </button>
           </div>
         </div>
       </section>
+      <div id="modal">
+        <delete-modal></delete-modal>
+      </div>
       <!-- list card entry container -->
       <section id="list-card"></section>
     </main>
@@ -132,9 +129,11 @@
   <!-- header link -->
   <script src="./components/header.js"></script>
   <!-- footer link -->
-   <!-- button link -->
-    <script src="./components/button.js"></script>
   <script src="./components/footer.js"></script>
+  <!-- button link -->
+  <script src="./components/button.js"></script>
+  <!-- delete modal -->
+   <script type="module" src="./components/deleteModal.js"></script>
   <!-- script -->
   <script type="module" src="./scripts/script.js"></script>
 </html>

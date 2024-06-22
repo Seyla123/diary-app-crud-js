@@ -42,7 +42,6 @@ body {
     flex-direction: column;
     gap: 10px;
 }
-
 header {
     background-image: url('../assets/background.jpg');
     padding:40px 0 ;
