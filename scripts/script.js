@@ -2,6 +2,7 @@
 import { createCard } from "../components/card.js";
 import { createEntryCard } from "../components/entryCard.js";
 import './deleleModal.js'
+import './updateModal.js'
 
 // function for delete data entry
 const deleteEntry = (id) => {
