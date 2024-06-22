@@ -37,7 +37,5 @@ class DeleteModel extends HTMLElement {
         this.innerHTML = createDeleteModal(id);
     }
 }
-
 window.customElements.define('delete-modal', DeleteModel)
-
 export { createDeleteModal };
