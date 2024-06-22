@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmButton = document.getElementById('confirmButton');
   
     const openDeleteModal = () => {
-        deleteModal.style.display = 'block';
+        deleteModal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
     const closeDeleteModal = () => {

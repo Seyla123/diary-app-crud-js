@@ -19,7 +19,7 @@
 :root{
     --purple-color : #767AE3;
     --blue-color :#1849A9;
-    --background-color : #F9FAFE;
+    --purple-color-light : #F9FAFE;
     --white-color : #FFFFFF;
     --title-color :#2D31A6;
     --border-color :#ccc;
@@ -38,7 +38,7 @@ body {
     width: 100%;
     transition-duration: 700ms;
     display: flex;
-    background-color: var(--background-color);
+    background-color: var(--purple-color-light);
     flex-direction: column;
     gap: 10px;
 }
