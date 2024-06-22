@@ -2,7 +2,6 @@
 import { createEntryCard } from "../components/entryCard.js";
 import './deleleModal.js'
 import './updateModal.js'
-
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
@@ -47,10 +46,10 @@ form.addEventListener("submit", (e) => {
   const entry = { id, title, content, date };
 
   // add or update data entry
-  editMode ? updateEntry(entry) : addEntry(entry);
+  editMode ? openUpdateModal(entry): addEntry(entry);
   // reset form and re-renderdisplay data entry
   displayEntry();
-  form.reset();
+  // form.reset();
 });
 // function for display data entry
 const displayEntry = () => {
@@ -94,6 +93,8 @@ const editEntry = (id) => {
  * @param {Object} entry - The entry object to update
  */
 const updateEntry = (entry) => {
+  const form = document.querySelector(".form");
+  
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
   // Find the index of the entry with the given id
@@ -109,11 +110,13 @@ const updateEntry = (entry) => {
     btnSubmit.innerHTML = "Add Entry";
     // Re-render the display of entries
     displayEntry();
+    form.reset();
   }
 };
 
 // Expose the functions to the window object
 window.updateEntry = editEntry;
+window.confirmEdit = updateEntry;
 window.deleteEntry = deleteEntry;
 // script.js
 

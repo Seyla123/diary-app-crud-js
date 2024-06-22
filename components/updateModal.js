@@ -1,4 +1,5 @@
-const createUpdateModal = () => {
+const createUpdateModal = (entry) => {
+
     return `
      <div id="updateModal" class="modal-update">
           <div class="modal-content">
@@ -12,14 +13,14 @@ const createUpdateModal = () => {
           <div class="modal-img-container">
             <img
             src="./assets/update.svg"
-            alt="Delete Icon"
+            alt="Update Icon"
             class="modal-img"
           />
           <p>Are sure you want to edit this ?</p>
           </div>
             <div class="modal-container btn-modal-container">
               <button id="cancelButtonUpdate" class="btn-primary-100">No</button>
-              <my-button 
+              <my-button onClick="confirmUpdate()" 
               title="Yes, sure"
               ></my-button>
             </div>
@@ -27,3 +28,13 @@ const createUpdateModal = () => {
       </div>
     `
 }
+
+class UpdateModal extends HTMLElement {
+    constructor() {
+        super();
+    }
+  connectedCallback() {
+    this.innerHTML = createUpdateModal();
+  }
+}
+window.customElements.define('update-modal', UpdateModal)
