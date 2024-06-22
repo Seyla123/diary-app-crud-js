@@ -9,6 +9,23 @@
 
 /* import styles for the card component*/
 @import url('./components/card.css');
+
+/* import styles for the Entry Card */
+@import url('./components/entry-card.css');
+
+/* import styles for the delete modal */
+@import url('./components/delete-modal.css');	
+/* global varaible */
+:root{
+    --purple-color : #767AE3;
+    --blue-color :#1849A9;
+    --purple-color-light : #F9FAFE;
+    --white-color : #FFFFFF;
+    --title-color :#2D31A6;
+    --border-color :#ccc;
+    --red-color : #E31B54;
+    --red-color-danger : #C01048;
+}
 /* Reset some default browser styles */
 * {
  font-family: "Public Sans", sans-serif;
@@ -21,19 +38,17 @@ body {
     width: 100%;
     transition-duration: 700ms;
     display: flex;
+    background-color: var(--purple-color-light);
     flex-direction: column;
     gap: 10px;
 }
-
 header {
-    text-wrap: nowrap;
-    padding:10px 0 ;
-    background-color: #F9FAFB;
+    background-image: url('../assets/background.jpg');
+    padding:40px 0 ;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 main {
     transition-duration: 700ms;
     max-width: 1500px;
@@ -55,7 +70,7 @@ button {
 /* style for text header */
 .text-header {
     transition-duration: 500ms;
-    color: #1849A9;
+    color: #F9FAFB;
     font-size: 18px;
     font-weight: bold;
 }
@@ -63,6 +78,8 @@ button {
 .border {
     border: 1px solid #ccc;
 }
+
+
 /* responsive for screen bigger than 430px */
 @media screen and (min-width: 430px) {
     body ,main{
@@ -70,10 +87,20 @@ button {
     }
        /* Styles for the header */
     header{
-        padding:20px 0 ;
+        padding:100px 0 ;
     }
     /* Styles for the header text */
     .text-header {
-        font-size: 24px;
+        font-size: 32px;
     }
 }
+@media screen and (min-width: 750px) {
+    header{
+        padding:150px 0 ;
+    }
+        /* Styles for the header text */
+        .text-header {
+            font-size: 38px;
+        }
+}
+

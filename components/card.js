@@ -17,10 +17,18 @@ const findDayOfWeek=(dateString)=> {
    // getDay() returns a number from 0 to 6, where 0 is Sunday and 6 is Saturday
     return daysOfWeek[date.getDay()]; 
   }
-
+    // Function to truncate text
+    function truncateText(text) {
+        const maxLength = 1000
+        if (text.length <= maxLength) {
+        return text;
+        }
+        return text.slice(0, maxLength) + '...';
+    }
 // Creates a card element for a diary entry with the given id, title, content, and date.
 const createCard = (id, title, content, date) => {
     const dayOfWeek = findDayOfWeek(date);
+
   // Function to create action button
   const createActionButton = (id) => {
     return `
@@ -37,7 +45,7 @@ const createCard = (id, title, content, date) => {
                     </defs>
                 </svg>
             </button>
-            <button onclick="window.deleteEntry(${id})" class="action-btn">
+            <button onclick="window.deleteEntry(${id})" class="action-btn" >
                 <svg class="delete-icon" width="100%" height="100%"  viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_10_5502)">
                     <path d="M12.4998 39.5833C12.4998 41.875 14.3748 43.75 16.6665 43.75H33.3332C35.6248 43.75 37.4998 41.875 37.4998 39.5833V14.5833H12.4998V39.5833ZM17.6248 24.75L20.5623 21.8125L24.9998 26.2292L29.4165 21.8125L32.354 24.75L27.9373 29.1667L32.354 33.5833L29.4165 36.5208L24.9998 32.1042L20.5832 36.5208L17.6457 33.5833L22.0623 29.1667L17.6248 24.75ZM32.2915 8.33333L30.2082 6.25H19.7915L17.7082 8.33333H10.4165V12.5H39.5832V8.33333H32.2915Z" />
@@ -53,26 +61,33 @@ const createCard = (id, title, content, date) => {
   }
 
   return `
-    <!-- Card element for diary entry -->
-    <div class=" border card-container">
+    <div class="card-container">
         <!-- Date and action buttons container -->
-        <div class="border card-date">
-            <h1>${dayNumber}</h1>
-            <h2>${dayOfWeek}</h2>
-            <div>
-                <p>${date}</p>
-            </div>
-            <div class="card-action-phone">
-                ${createActionButton(id)}
+        <div class="content-title-container">
+            <h1 class="">${title}</h1>
+            <div class="card-date">
+                <h1>${dayNumber}</h1>
+                <h2>${dayOfWeek}</h2>
+                <div>
+                    <p>${date}</p>
+                </div>
             </div>
         </div>
         <!-- Content container -->
-        <div class="border card-content ">
-            <h1>${title}</h1>
-            <p class="card-text-content">${content}</p>
+        <div class="card-content ">
+            <div>
+                
+                <p class="card-text-content">${truncateText(content)}</p>
+            </div>
+           
+            <div class="card-action-phone">
+                    ${createActionButton(id)}
+            </div>
+            
         </div>
+        
         <!-- Action button container for big screens -->
-        <div class="border card-action ">
+        <div class=" card-action ">
            ${createActionButton(id)}
         </div>
     </div>

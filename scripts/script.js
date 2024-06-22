@@ -1,7 +1,7 @@
 'use strict';
 import { createCard } from "../components/card.js";
-
-
+import { createEntryCard } from "../components/entryCard.js";
+import './deleleModal.js'
 
 // function for delete data entry
 const deleteEntry = (id) => {
@@ -59,13 +59,12 @@ const displayEntry = () => {
   containerListCard.innerHTML = entries
     .map((item) => {
       // Create a card element for the current entry and append it to the HTML for the container of card elements.
-      return createCard(item.id, item.title, item.content, item.date);
+      return createEntryCard(item.id, item.title, item.content, item.date);
     })
     .join("");
 };
 // Render Display all entries in the card list
 displayEntry();
-
 /**
  * edit an entry with the given id
  * @param {string} id - The id of the entry to update
@@ -116,3 +115,5 @@ const updateEntry = (entry) => {
 // Expose the functions to the window object
 window.updateEntry = editEntry;
 window.deleteEntry = deleteEntry;
+// script.js
+
