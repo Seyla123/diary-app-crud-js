@@ -15,6 +15,9 @@
 
 /* import styles for the delete modal */
 @import url('./components/delete-modal.css');	
+
+/* import styles for the update modal */
+@import url('./components/update-modal.css');	
 /* global varaible */
 :root{
     --purple-color : #767AE3;

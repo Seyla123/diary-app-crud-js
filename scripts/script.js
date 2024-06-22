@@ -1,8 +1,7 @@
 'use strict';
-import { createCard } from "../components/card.js";
 import { createEntryCard } from "../components/entryCard.js";
 import './deleleModal.js'
-
+import './updateModal.js'
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
@@ -19,7 +18,19 @@ let editMode = false;
 const btnSubmit = document.querySelector(".form button");
 const containerListCard = document.querySelector("#list-card");
 const form = document.querySelector(".form");
-
+const toggleUpdateMode = () => {
+  if(editMode){
+    const updateCancel = document.querySelector("#updateCancel");
+    updateCancel.style.display = "block";
+    const form = document.querySelector(".form");
+    btnSubmit.innerHTML = "Update";
+    updateCancel.addEventListener("click", () => {
+      editMode = false;
+      form.reset();
+      updateCancel.style.display = "none";
+    });
+  }
+}
 // function add entry
 const addEntry = (entry) => {
   // Parse the entries from local storage, or create an empty array if no entries exist.
@@ -47,10 +58,10 @@ form.addEventListener("submit", (e) => {
   const entry = { id, title, content, date };
 
   // add or update data entry
-  editMode ? updateEntry(entry) : addEntry(entry);
+  editMode ? openUpdateModal(entry): addEntry(entry);
   // reset form and re-renderdisplay data entry
   displayEntry();
-  form.reset();
+  // form.reset();
 });
 // function for display data entry
 const displayEntry = () => {
@@ -75,7 +86,7 @@ const editEntry = (id) => {
   // Set edit mode to true
   editMode = true;
   // Change the submit button text to 'Update'
-  btnSubmit.innerHTML = "Update";
+  toggleUpdateMode()
   // Find the index of the entry with the given id
   const index = entries.findIndex((item) => item.id == id);
   if (index !== -1) {
@@ -94,6 +105,8 @@ const editEntry = (id) => {
  * @param {Object} entry - The entry object to update
  */
 const updateEntry = (entry) => {
+  const form = document.querySelector(".form");
+  
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
   // Find the index of the entry with the given id
@@ -109,11 +122,13 @@ const updateEntry = (entry) => {
     btnSubmit.innerHTML = "Add Entry";
     // Re-render the display of entries
     displayEntry();
+    form.reset();
   }
 };
 
 // Expose the functions to the window object
 window.updateEntry = editEntry;
+window.confirmEdit = updateEntry;
 window.deleteEntry = deleteEntry;
 // script.js
 

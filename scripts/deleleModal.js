@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "auto";
   };
   deleteButton?.addEventListener("click", openDeleteModal);
-  closeButton.addEventListener("click", closeDeleteModal);
-  cancelButton.addEventListener("click", closeDeleteModal);
+  closeButton?.addEventListener("click", closeDeleteModal);
+  cancelButton?.addEventListener("click", closeDeleteModal);
 
   window.addEventListener("click", (event) => {
     if (event.target == deleteModal) {
@@ -33,9 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       deleteModal.style.display = "none";
       document.body.style.overflow = "auto";
       deleteEntry(deleteId);
-      
       deleteId = null;
-
     } else {
       console.log("Please select an entry to delete");
     }
