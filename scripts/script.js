@@ -1,6 +1,7 @@
 'use strict';
 import { createCard } from "../components/card.js";
 import './deleleModal.js'
+
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.

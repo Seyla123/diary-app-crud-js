@@ -13,7 +13,6 @@
     padding: 10px;
     border-radius: 10px;
     display: flex;
-    gap: 10px;
     border: 1px solid var(--border-color);
 }
 /* ccontainer of title ,date and content text */
@@ -31,6 +30,7 @@
 }
 /* title color */
 .entry-title{
+    font-size: 12px;
     color:var(--title-color);
 }
 /* date color */
@@ -47,6 +47,7 @@
 /* container button action */
 .container-btn-entry{
     display: flex;
+    min-width: 30px;
     gap: 5px;
     flex-direction: column;
     justify-content: center;
