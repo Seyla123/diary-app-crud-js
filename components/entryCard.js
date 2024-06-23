@@ -1,5 +1,6 @@
-//function to find day of the week
+//to get the day of the week
 let dayNumber;
+//function to find day of the week
 const findDayOfWeek=(dateString)=> {
     // Split the input date string into an array [day, month, year]
     const dateParts = dateString.split('-');
