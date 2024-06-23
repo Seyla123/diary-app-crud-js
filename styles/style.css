@@ -18,6 +18,11 @@
 
 /* import styles for the update modal */
 @import url('./components/update-modal.css');	
+
+/* import styles for the update modal */
+@import url('./components/view-modal.css');
+
+
 /* global varaible */
 :root{
     --purple-color : #767AE3;

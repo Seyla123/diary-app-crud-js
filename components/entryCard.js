@@ -1,5 +1,6 @@
-//function to find day of the week
+//to get the day of the week
 let dayNumber;
+//function to find day of the week
 const findDayOfWeek=(dateString)=> {
     // Split the input date string into an array [day, month, year]
     const dateParts = dateString.split('-');
@@ -20,13 +21,13 @@ const findDayOfWeek=(dateString)=> {
 const createEntryCard = ( id, title, content, date ) => {
   const dayOfWeek = findDayOfWeek(date);
   return `
-        <div class="container-entry">
+        <div class="container-entry" >
           <div class="entry-date-container">
               <h1>${dayNumber}</h1>
               <h2>${dayOfWeek}</h2>
               <p>${date}</p>
           </div>
-          <div class="content-entry">
+          <div class="content-entry" id="${id}">
           
             <div class="container-title">
               <h3 class="entry-title">
@@ -36,7 +37,7 @@ const createEntryCard = ( id, title, content, date ) => {
               ${date}
               </p>
             </div>
-            <div class="entry-content">
+            <div class="entry-content" >
                 ${content}
             </div>
           </div>

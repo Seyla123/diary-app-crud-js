@@ -1,3 +1,4 @@
+// function for create update modal
 const createUpdateModal = (entry) => {
 
     return `
@@ -29,12 +30,15 @@ const createUpdateModal = (entry) => {
     `
 }
 
+// This class defines a custom HTML element for the update modal.
 class UpdateModal extends HTMLElement {
     constructor() {
         super();
     }
   connectedCallback() {
+    // Set the innerHTML of the element to the update modal HTML
     this.innerHTML = createUpdateModal();
   }
 }
+// Define the custom element with the name 'update-modal'
 window.customElements.define('update-modal', UpdateModal)

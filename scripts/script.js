@@ -1,7 +1,18 @@
 'use strict';
+// import modal component
+import '../components/updateModal.js';
+import '../components/deleteModal.js';
+import '../components/viewModal.js';
+
+//import create entry card function  
 import { createEntryCard } from "../components/entryCard.js";
+
+// import script for delete , update , view modal
 import './deleleModal.js'
 import './updateModal.js'
+import './viewModal.js'
+
+
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
@@ -14,32 +25,38 @@ const deleteEntry = (id) => {
   displayEntry();
 };
 
+/**
+ * Toggles the edit mode and updates the submit button and cancel button visibility.
+ * If edit mode is true, it updates the submit button text to "Update" and adds a click event listener to the cancel button.
+ * On click, it sets edit mode to false, hides the cancel button, sets the submit button text to "Add Entry", and resets the form.
+ * If edit mode is false, it sets edit mode to false and hides the cancel button.
+ */
 let editMode = false;
 const btnSubmit = document.querySelector(".form button");
 const containerListCard = document.querySelector("#list-card");
 const form = document.querySelector(".form");
 
+// function for toggle update
 const toggleUpdateMode = () =>{
   const updateCancel = document.querySelector("#updateCancel");
-  updateCancel.style.display = "block";
+  updateCancel.style.display = "block"; // Show the cancel button
   const form = document.querySelector(".form");
   
-  if(editMode){
-    btnSubmit.innerHTML = "Update";
+  if(editMode){ 
+    btnSubmit.innerHTML = "Update"; // Update the submit button text
     editMode = true;
     updateCancel.addEventListener("click", () => {
       editMode = false;
-      updateCancel.style.display = "none";
-      btnSubmit.textContent = "Add Entry";
-      form.reset();
+      updateCancel.style.display = "none"; // Hide the cancel button
+      btnSubmit.textContent = "Add Entry"; // Set the submit button text to "Add Entry"
+      form.reset(); // Reset the form
     });
   }else{
     editMode = false;
-    btnSubmit.innerHTML = "Add Entry";
-    updateCancel.style.display = "none";
+    btnSubmit.innerHTML = "Add Entry"; // Set the submit button text to "Add Entry"
+    updateCancel.style.display = "none"; // Hide the cancel button
   }
 }
-
 // function add entry
 const addEntry = (entry) => {
   // Parse the entries from local storage, or create an empty array if no entries exist.
@@ -118,7 +135,6 @@ const updateEntry = (entry) => {
   
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
-  // toggleUpdateMode()
 
   // Find the index of the entry with the given id
   const index = entries.findIndex((item) => item.id == entry.id);
@@ -137,7 +153,6 @@ const updateEntry = (entry) => {
     form.reset();
   }
 };
-
 // Expose the functions to the window object
 window.updateEntry = editEntry;
 window.confirmEdit = updateEntry;
