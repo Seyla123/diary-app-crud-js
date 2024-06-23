@@ -1,8 +1,18 @@
 'use strict';
+// import modal component
+import '../components/updateModal.js';
+import '../components/deleteModal.js';
+import '../components/viewModal.js';
+
+//import create entry card function  
 import { createEntryCard } from "../components/entryCard.js";
+
+// import script for delete , update , view modal
 import './deleleModal.js'
 import './updateModal.js'
 import './viewModal.js'
+
+
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
