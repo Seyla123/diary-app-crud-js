@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
             entryUpdate  = entry;
             updateModal.style.display = "flex";
             document.body.style.overflow = "hidden";
-            console.log("tes" ,entryUpdate);
         };
         const closeUpdateModal = () => {
             updateModal.style.display = "none";
@@ -17,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         updateButton?.addEventListener("click", openUpdateModal);
         closeUpdate?.addEventListener("click", closeUpdateModal);
         cancelButtonUpdate?.addEventListener("click", closeUpdateModal);
+        const updateCancel = document.querySelector("#updateCancel");
         const confirmUpdate = () => {
-            console.log(entryUpdate);
+            updateCancel.style.display = "none";
             if(entryUpdate != null) {
                 updateModal.style.display = "none";
                 document.body.style.overflow = "auto";
                 confirmEdit(entryUpdate);  
-                console.log("yes");
             } 
         }
         window.addEventListener("click", (event) => {
