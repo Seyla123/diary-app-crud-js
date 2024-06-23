@@ -1,3 +1,4 @@
+// function create delete modal
 const createDeleteModal = () =>{
     return `
     <div id="deleteModal" class="modal">
@@ -28,14 +29,20 @@ const createDeleteModal = () =>{
     `
 }
 
+// This class defines a custom HTML element for the Delete modal.
+
 class DeleteModel extends HTMLElement {
     constructor() {
         super();
     }
+    // When the element is added to the DOM, set its innerHTML to the delete modal HTML
     connectedCallback() {
         const id = this.getAttribute('id') || null;
         this.innerHTML = createDeleteModal(id);
     }
 }
+// Define the custom element with the name 'delete-modal'
 window.customElements.define('delete-modal', DeleteModel)
+
+// Export the createDeleteModal function for use in other modules
 export { createDeleteModal };
