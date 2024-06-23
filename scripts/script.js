@@ -28,6 +28,8 @@ const toggleUpdateMode = () => {
       editMode = false;
       form.reset();
       updateCancel.style.display = "none";
+      btnSubmit.style.display = "Add Entry";
+
     });
   }
 }
