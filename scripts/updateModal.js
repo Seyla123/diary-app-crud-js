@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         updateButton?.addEventListener("click", openUpdateModal);
         closeUpdate?.addEventListener("click", closeUpdateModal);
         cancelButtonUpdate?.addEventListener("click", closeUpdateModal);
+        const updateCancel = document.querySelector("#updateCancel");
         const confirmUpdate = () => {
-            console.log(entryUpdate);
+            updateCancel.style.display = "none";
             if(entryUpdate != null) {
                 updateModal.style.display = "none";
                 document.body.style.overflow = "auto";

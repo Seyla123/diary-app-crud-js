@@ -18,21 +18,28 @@ let editMode = false;
 const btnSubmit = document.querySelector(".form button");
 const containerListCard = document.querySelector("#list-card");
 const form = document.querySelector(".form");
-const toggleUpdateMode = () => {
+
+const toggleUpdateMode = () =>{
+  const updateCancel = document.querySelector("#updateCancel");
+  updateCancel.style.display = "block";
+  const form = document.querySelector(".form");
+  
   if(editMode){
-    const updateCancel = document.querySelector("#updateCancel");
-    updateCancel.style.display = "block";
-    const form = document.querySelector(".form");
     btnSubmit.innerHTML = "Update";
+    editMode = true;
     updateCancel.addEventListener("click", () => {
       editMode = false;
-      form.reset();
       updateCancel.style.display = "none";
-      btnSubmit.style.display = "Add Entry";
-
+      btnSubmit.textContent = "Add Entry";
+      form.reset();
     });
+  }else{
+    editMode = false;
+    btnSubmit.innerHTML = "Add Entry";
+    updateCancel.style.display = "none";
   }
 }
+
 // function add entry
 const addEntry = (entry) => {
   // Parse the entries from local storage, or create an empty array if no entries exist.
@@ -111,6 +118,8 @@ const updateEntry = (entry) => {
   
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
+  // toggleUpdateMode()
+
   // Find the index of the entry with the given id
   const index = entries.findIndex((item) => item.id == entry.id);
   if (index !== -1) {
@@ -124,6 +133,7 @@ const updateEntry = (entry) => {
     btnSubmit.innerHTML = "Add Entry";
     // Re-render the display of entries
     displayEntry();
+    
     form.reset();
   }
 };
@@ -132,5 +142,4 @@ const updateEntry = (entry) => {
 window.updateEntry = editEntry;
 window.confirmEdit = updateEntry;
 window.deleteEntry = deleteEntry;
-// script.js
 
