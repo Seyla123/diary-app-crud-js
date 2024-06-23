@@ -2,6 +2,7 @@
 import { createEntryCard } from "../components/entryCard.js";
 import './deleleModal.js'
 import './updateModal.js'
+import './viewModal.js'
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
