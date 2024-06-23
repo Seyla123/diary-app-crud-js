@@ -1,21 +1,29 @@
+import { createViewModal } from "../components/viewModal.js";
+
 document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".container-entry");
+    const cards = document.querySelectorAll(".content-entry");
     const viewModal = document.querySelector("#viewModal");
-    const closeButton = document.querySelector(".closeView");
+    const closeButtons = document.querySelectorAll(".closeView");
     const openViewModal = () => {
-        viewModal.style.display = "flex";
-        document.body.style.overflow = "hidden";
+       document.body.style.overflow = "hidden";
     };
 
     const closeViewModal = () => {
-        viewModal.style.display = "none";
+        document.querySelector('#viewModalSelection').innerHTML = '';
         document.body.style.overflow = "auto";
     };
-    closeButton.addEventListener('click',closeViewModal)
+    closeButtons.forEach((closeButton) => {
+        closeButton.addEventListener('click',closeViewModal)  
+    })
     cards.forEach((card) => {
-        card.addEventListener("click", () => {
+        card.addEventListener("click", (e) => {
+            e.preventDefault();
+            const id = card.getAttribute("id")
+            let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
+            const entry = entries.filter((item) => item.id == id)[0];
+            document.querySelector('#viewModalSelection').innerHTML = createViewModal(entry.title,entry.content,entry.date);
             openViewModal();
         });
     });
+    window.test = closeViewModal;
 })
-
