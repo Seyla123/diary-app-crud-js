@@ -15,7 +15,7 @@ const createViewModal = (title, content, date) => {
         <div class="modal-content-view">
           <!-- Close Button -->
           <div class="modal-container">
-            <span class="closeView" onclick="window.test()">
+            <span class="closeView" onclick="window.close()">
               <!-- Close Icon -->
               <svg
                 width="31"
