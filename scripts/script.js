@@ -65,6 +65,7 @@ const addEntry = (entry) => {
   entries.push(entry);
   // Store the updated array of entries back to local storage.
   localStorage.setItem("diaryEntries", JSON.stringify(entries));
+  form.reset();
 };
 
 // get data entry when form submit

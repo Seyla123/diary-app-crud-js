@@ -52,7 +52,7 @@ body {
 }
 header {
     background-image: url('../assets/background.jpg');
-    padding:40px 0 ;
+    padding:40px 0px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,11 +72,17 @@ footer{
     align-items: center;
     padding: 20px;
     width: 100%;
-    max-width: 1500px;
     height: 180px;
     margin: 0 auto;
     background-color: #F9FAFB;
     border-top: 1px solid var(--border-color);
+}
+.footer-container{
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 .footer-title{
     color: var( --purple-color);
@@ -131,6 +137,9 @@ button {
        /* Styles for the header */
     header{
         padding:100px 0 ;
+    }
+    footer{
+        height: 400px;
     }
     /* Styles for the header text */
     .text-header {
