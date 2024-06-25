@@ -60,11 +60,12 @@
 .entry-date{
     color:#515151;
 }
+.content-entry{
+    height: 60px;
+    transition-duration: 500ms;
+}
 /* text content */
 .entry-content{
-
-    transition-duration: 500ms;
-    height: 60px;
     overflow: hidden;
     line-height: 0.9rem;
 }
@@ -103,10 +104,12 @@
     .container-btn-entry{
         min-width: 40px;
     }
+    .content-entry{
+        height: 90px;
+    }
     .entry-content{
         font-size: 12px;
-        height: 90px;
-         line-height: 1.1rem;
+        line-height: 1.1rem;
 
     }
     .entry-title{
@@ -132,8 +135,11 @@
     .container-btn-entry{
         min-width: 60px;
     }
-    .entry-content{
+    .content-entry{
         height: 120px;
+    }
+    .entry-content{
+        line-height: 1.2rem
     }
     .edit-btn svg{
         width: 24px;
