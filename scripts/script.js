@@ -94,6 +94,7 @@ form.addEventListener("submit", (e) => {
 const displayEntry = () => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
+  entries.reverse();
   containerListCard.innerHTML = entries
     .map((item) => {
       // Create a card element for the current entry and append it to the HTML for the container of card elements.
@@ -112,6 +113,8 @@ const editEntry = (id) => {
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
   // Set edit mode to true
   editMode = true;
+  // auto scroll to top
+  scrollToTop();
   // Change the submit button text to 'Update'
   toggleUpdateMode()
   // Find the index of the entry with the given id
@@ -126,7 +129,10 @@ const editEntry = (id) => {
     document.querySelector("#date").value = entry.date;
   }
 };
-
+// auto scroll to top 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 /**
  * Update an entry with the given id in the local storage
  * @param {Object} entry - The entry object to update
@@ -148,6 +154,7 @@ const updateEntry = (entry) => {
     editMode = false;
     // Change the submit button text to 'Add Entry'
     btnSubmit.innerHTML = "Add Entry";
+    toggleUpdateMode()
     // Re-render the display of entries
     displayEntry();
     
@@ -158,4 +165,3 @@ const updateEntry = (entry) => {
 window.updateEntry = editEntry;
 window.confirmEdit = updateEntry;
 window.deleteEntry = deleteEntry;
-
