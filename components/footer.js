@@ -25,7 +25,7 @@ const createFooter = ()=>{
             </ul>
         </div>
         <!-- Separator -->
-        <span>|</span>
+        <span class="separator"></span>
         <!-- Footer right container -->
         <div class="footer-right-container">
             <!-- Contact me title -->
