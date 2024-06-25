@@ -52,7 +52,7 @@ body {
 }
 header {
     background-image: url('../assets/background.jpg');
-    padding:40px 0 ;
+    padding:40px 0px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,11 +72,17 @@ footer{
     align-items: center;
     padding: 20px;
     width: 100%;
-    max-width: 1500px;
     height: 180px;
     margin: 0 auto;
     background-color: #F9FAFB;
     border-top: 1px solid var(--border-color);
+}
+.footer-container{
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 .footer-title{
     color: var( --purple-color);
@@ -100,7 +106,10 @@ footer{
     flex-direction: column;
     align-items: flex-start;
 }
-
+.separator{
+    width: 2px;
+    background-color: #767AE3;
+}
 button {
   background: none;
   border: none;
@@ -132,6 +141,9 @@ button {
     header{
         padding:100px 0 ;
     }
+    footer{
+        height: 350px;
+    }
     /* Styles for the header text */
     .text-header {
         font-size: 32px;
@@ -139,14 +151,22 @@ button {
     .footer-left-container ul >li{
         font-size: 12px;
     }
+    .separator{
+        width: 3px;
+        background-color: #767AE3;
+    }
 }
 @media screen and (min-width: 750px) {
     header{
         padding:150px 0 ;
     }
-        /* Styles for the header text */
-        .text-header {
+    /* Styles for the header text */
+    .text-header {
             font-size: 38px;
-        }
+    }
+    .footer-right-container{
+        width: 300px;
+
+    }
 }
 

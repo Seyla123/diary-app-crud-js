@@ -14,7 +14,8 @@ const createFooter = ()=>{
     </div>
     <!-- Footer container -->
     <footer>
-        
+        <div class="footer-container">
+
         <!-- Footer left container -->
         <div class="footer-left-container">
             <!-- Footer title -->
@@ -24,7 +25,7 @@ const createFooter = ()=>{
             </ul>
         </div>
         <!-- Separator -->
-        <span>|</span>
+        <span class="separator"></span>
         <!-- Footer right container -->
         <div class="footer-right-container">
             <!-- Contact me title -->
@@ -33,6 +34,7 @@ const createFooter = ()=>{
             <input class="border input" type="text" placeholder="message here"></input>
             <!-- Send email button -->
             <my-button title="Send Email"></my-button>
+        </div>
         </div>
     </footer>
     `
