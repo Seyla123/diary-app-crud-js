@@ -61,6 +61,8 @@ After opening `index.html` in your browser, you can start using the diary applic
 - **CSS**: For styling the application.
 - **JavaScript**: For handling CRUD operations and user interactions.
 
+**Convention Guide** - [Link Here](https://outgoing-oval-b13.notion.site/Seav-Seyla-Diary-Web-Application-08b9b87d74f44e8ba3f6ffe3580cf4d4?pvs=4)
+
 ## Contributing
 
 Contributions are welcome! If you would like to contribute, please follow the Git-Flow branching strategy as outlined below:
