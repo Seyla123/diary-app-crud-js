@@ -1,12 +1,6 @@
 import { closeIcon } from "./closeIcon.js";
-/**
- * Generates a view modal HTML string with the given title, content, and date.
- *
- * @param {string} title - The title of the entry.
- * @param {string} content - The content of the entry.
- * @param {string} date - The date of the entry.
- * @return {string} - The HTML string of the view modal.
- */
+// create view modal HTML string with the given title, content, and date.
+
 const createViewModal = (title, content, date) => {
   return `
     <!-- View Modal -->
