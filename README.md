@@ -21,7 +21,7 @@ This project provides a single-page diary application where users can:
 3. Update any diary entry.
 4. Delete entries that are no longer needed.
 
-**Link to Live Demo** - [CRUD Diary](https://your-live-demo-link.com)
+**Link to Live Demo** - [CRUD Diary](https://seav-seyla-dairy-application.vercel.app/)
 
 The application is designed with a focus on simplicity and ease of use, leveraging only front-end technologies to perform all CRUD operations without requiring a backend server.
 
@@ -29,7 +29,7 @@ The application is designed with a focus on simplicity and ease of use, leveragi
 
 1. Clone the repository:
     ```bash
-    git clone https://your-repo-link.git
+    git clone https://git.clp.kr/anbschool/2nd/hexcode/seav-seyla/diary-web-app.git
     ```
 
 2. Navigate to the project directory:
