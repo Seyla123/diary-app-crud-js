@@ -14,7 +14,6 @@ function viewModalFunc(){
         document.body.style.overflow = "auto";
     };
 
-    console.log('card length', cards.length);
     // Add event listeners to each card element
     cards.forEach((card) => {
         card.addEventListener("click", (e) => {
