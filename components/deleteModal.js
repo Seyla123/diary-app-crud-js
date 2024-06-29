@@ -19,8 +19,14 @@ const createDeleteModal = () =>{
         <p>Do you really want to delete this ?</p>
          </div>
           <div class="modal-container btn-modal-container">
-            <button id="cancelButton" class="btn-primary-100">No</button>
-            <my-button onClick="confirmDelete()"
+            <my-button 
+            btn-type="primary" 
+            title="No" 
+            id="cancelButton" 
+            >No</my-button>
+            
+            <my-button 
+            onClick="confirmDelete()"
             title="Yes, delete"
             ></my-button>
           </div>
