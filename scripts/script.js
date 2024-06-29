@@ -10,7 +10,7 @@ import './viewModal.js'
 import { createEntryCard } from "../components/entryCard.js";
 // import 'not found data ' section
 import '../components/notFoundData.js';
-
+import { viewModalFunc } from './viewModal.js';
 
 // function for delete data entry
 const deleteEntry = (id) => {
@@ -87,7 +87,7 @@ form.addEventListener("submit", (e) => {
   editMode ? openUpdateModal(entry): addEntry(entry);
   // reset form and re-renderdisplay data entry
   displayEntry();
-  // form.reset();
+  
 });
 // function for display data entry
 const displayEntry = () => {
@@ -101,9 +101,11 @@ const displayEntry = () => {
         return createEntryCard(item.id, item.title, item.content, item.date);
       })
       .join("");
+      viewModalFunc();
   }else{
     containerListCard.innerHTML=`<not-found-data></not-found-data>`;
   }
+
 };
 // Render Display all entries in the card list
 displayEntry();
