@@ -20,10 +20,17 @@ const createUpdateModal = (entry) => {
           <p>Are sure you want to edit this ?</p>
           </div>
             <div class="modal-container btn-modal-container">
-              <button id="cancelButtonUpdate" class="btn-primary-100">No</button>
+
+              <my-button 
+              btn-type="primary" 
+              title="No" 
+              id="cancelButtonUpdate"
+              ></my-button>
+
               <my-button onClick="confirmUpdate()" 
               title="Yes, sure"
               ></my-button>
+              
             </div>
           </div>
       </div>
