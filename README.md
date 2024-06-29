@@ -34,7 +34,7 @@ The application is designed with a focus on simplicity and ease of use, leveragi
 
 2. Navigate to the project directory:
     ```bash
-    cd crud-diary
+    cd diary-web-app
     ```
 
 3. Open the `index.html` file in your browser to view the project.
@@ -60,6 +60,8 @@ After opening `index.html` in your browser, you can start using the diary applic
 - **HTML**: For structuring the content.
 - **CSS**: For styling the application.
 - **JavaScript**: For handling CRUD operations and user interactions.
+
+**Convention Guide** - [Link Here](https://outgoing-oval-b13.notion.site/Seav-Seyla-Diary-Web-Application-08b9b87d74f44e8ba3f6ffe3580cf4d4?pvs=4)
 
 ## Contributing
 
