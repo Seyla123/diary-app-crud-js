@@ -22,6 +22,9 @@
 /* import styles for the update modal */
 @import url('./components/view-modal.css');
 
+/* import styles for data not found section */
+@import url('./components/data-not-found.css');
+
 
 /* global varaible */
 :root{
