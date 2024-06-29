@@ -1,37 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diary Web Application</title>
     <!-- CSS Link -->
-     <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" href="./assets/logo.jpg" type="image/x-icon" />
+  </head>
+  <body>
     <!-- header -->
-    <header class="text-header container border">
-        <p>Diary Application</p>
-    </header>
+    <header-component></header-component>
+    <!-- main -->
     <main>
-        <form action="" class="form">
-            <!-- input title -->
-            <input class="input border" type="text" name="title" id="title" placeholder="input your title here">
-            <!-- input content -->
-            <textarea class="border input" name="content" id="content" placeholder="input your content here" rows="10"></textarea>
-            <!-- input date -->
-             <input class="border input" type="date" name="date" id="date">
-            <!-- button -->
-            <div class="container-btn">
-                <button class="btn">Add Entry</button>
-            </div>
-        </form>
-        <section id="list-card">
-            
-            
-        </section>
+      <!-- form -->
+      <form action="/submit" method="post" class="form">
+        <!-- id for submit button -->
+        <input type="hidden" name="id" id="id" required />
+        <!-- input title -->
+        <span>Title :</span>
+        <input
+          class="input border"
+          type="text"
+          name="title"
+          id="title"
+          placeholder="input your title here"
+          required
+        />
+        <!-- input content -->
+        <span>Content :</span>
+        <textarea
+          class="border input"
+          name="content"
+          id="content"
+          placeholder="input your content here"
+          rows="10"
+          required
+        ></textarea>
+        <!-- input date -->
+        <input
+          class="border input"
+          type="date"
+          name="date"
+          id="date"
+          required
+        />
+        <!--submit button -->
+        <div class="container-btn">
+          <my-button
+            title="Add Entry"
+            type="submit"
+            class="text-button"
+          ></my-button>
+          <my-button 
+          id="updateCancel" 
+          
+          title="Cancel"
+          ></my-button>
+
+        </div>
+      </form>
+
+      <!-- list card entry container -->
+      <section id="list-card"></section>
     </main>
     <!-- footer -->
-    <footer>Seav Seyla</footer>
-</body>
-<script type="module" src="./scripts/script.js"></script>
+    <footer-component></footer-component>
+  </body>
+  <!-- header link -->
+  <script src="./components/header.js"></script>
+  <!-- footer link -->
+  <script type="module" src="./components/footer.js"></script>
+  <!-- button link -->
+  <script src="./components/button.js"></script>
+  <!-- script -->
+  <script type="module" src="./scripts/script.js"></script>
 </html>

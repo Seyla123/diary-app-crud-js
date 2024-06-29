@@ -9,8 +9,34 @@
 
 /* import styles for the card component*/
 @import url('./components/card.css');
+
+/* import styles for the Entry Card */
+@import url('./components/entry-card.css');
+
+/* import styles for the delete modal */
+@import url('./components/delete-modal.css');	
+
+/* import styles for the update modal */
+@import url('./components/update-modal.css');	
+
+/* import styles for the update modal */
+@import url('./components/view-modal.css');
+
+
+/* global varaible */
+:root{
+    --purple-color : #767AE3;
+    --blue-color :#1849A9;
+    --purple-color-light : #F9FAFE;
+    --white-color : #FFFFFF;
+    --title-color :#2D31A6;
+    --border-color :#ccc;
+    --red-color : #E31B54;
+    --red-color-danger : #C01048;
+}
 /* Reset some default browser styles */
 * {
+ font-family: "Public Sans", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,33 +45,65 @@
 body {
     width: 100%;
     transition-duration: 700ms;
-    font-family: "Public Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     display: flex;
+    background-color: var(--purple-color-light);
     flex-direction: column;
     gap: 10px;
 }
-
+/* header */
 header {
-    text-wrap: nowrap;
-    padding:10px 0 ;
-    background-color: #F9FAFB;
+    background-image: url('../assets/background.jpg');
+    padding:40px 0px ;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* style for text header */
+.text-header {
+    transition-duration: 500ms;
+    color: #F9FAFB;
+    font-size: 18px;
+    font-weight: bold;
+}
 
+/* main section */
 main {
     transition-duration: 700ms;
-    max-width: 1500px;
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap:10px;
 }
+/* footer */
+footer{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F9FAFB;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-title{
+    color: var( --purple-color);
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer-left-container{
+    transition-duration: 300ms;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-left-container ul >li{
+    list-style: none;
+    font-size: 10px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+/* button */
 button {
   background: none;
   border: none;
@@ -55,33 +113,52 @@ button {
   color: inherit;
   cursor: pointer;
 }
-.text-header {
-    transition-duration: 500ms;
-    color: #1849A9;
-    font-size: 18px;
-    font-weight: bold;
-}
 
 /* Styles for the border */
 .border {
     border: 1px solid #ccc;
 }
+
+
 /* responsive for screen bigger than 430px */
 @media screen and (min-width: 430px) {
-    body{
+    body ,main{
         gap:20px;
     }
-    main {
-        gap: 20px;
-    }
-
-    /* Styles for the header */
+       /* Styles for the header */
     header{
-        padding:20px 0 ;
+        padding:100px 0 ;
     }
-
     /* Styles for the header text */
     .text-header {
-        font-size: 24px;
+        font-size: 32px;
     }
+    .footer-left-container ul >li{
+        font-size: 12px;
+    }
+    .footer-left-container{
+        padding:40px 20px ;
+    }
+}
+@media screen and (min-width: 750px) {
+    header{
+        padding:150px 0 ;
+    }
+    /* Styles for the header text */
+    .text-header {
+            font-size: 38px;
+    }
+    .footer-left-container{
+        padding:60px 20px ;
+    }
+}
+@media screen and (min-width: 1400px) {
+    header{
+        max-width: 1400px;
+        margin: 10px auto;
+        border-radius: 10px;
+
+    }
+
+    
 }

@@ -1,9 +1,11 @@
+/* container of list card */
 #list-card {
     padding: 0 10px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 5px;
 }
+
 /* card container */
 .card-container {
     display: flex;
@@ -12,9 +14,12 @@
     font-size: 12px;
     font-weight: bold;
     color: #244586;
+    border: 1px solid #ccc;
 }
-
-
+.content-title-container{
+    display: flex;
+    justify-content: space-between;
+}
 /* card date container */
 .card-date {
     display: flex;
@@ -23,7 +28,7 @@
     align-items: center;
     padding: 5px;
 }
-
+/* hide h1, h2 on big screen */
 .card-date h1,
 .card-date h2 {
     margin: 0;
@@ -31,7 +36,7 @@
     color: #767AE3;
 }
 
-.card-date p {
+.text-date {
     margin: 0;
     font-size: 10px;
     color: #767AE3;
@@ -40,10 +45,12 @@
 /* container of action button for small screen */
 .card-action-phone {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .action-btn {
-    min-width: 10px;
+    min-width: 15px;
     cursor: pointer;
     max-width: 20px;
 }
@@ -53,6 +60,7 @@
     fill: #767AE3;
     transition-duration: 300ms;
 }
+
 /* hover for edit button */
 .action-btn .edit-icon:hover {
     fill: #1849A9;
@@ -63,6 +71,7 @@
     fill: #E31B54;
     transition-duration: 300ms;
 }
+
 /* hover for delete button */
 .action-btn .delete-icon:hover {
     fill: #C01048;
@@ -70,64 +79,78 @@
 
 /* card content container*/
 .card-content {
-    height: 100%;
     gap: 5px;
     padding: 5px;
     transition-duration: 300ms;
     background-color: #F9FAFE;
     display: flex;
-    flex-direction: column;
 }
+
 .card-content h1 {
     transition-duration: 300ms;
     color: #1849A9;
     font-size: 10px;
     margin: 0;
 }
+
 .card-content p {
     transition-duration: 300ms;
     font-size: 8px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 0.7rem;
-    margin: 0;
+    margin: 0;    
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
+
 /* hide card action for phone screen */
 .card-action {
     display: none;
+    border-left:1px solid #ccc ;
 }
 
 @media screen and (min-width: 430px) {
-.card-content h1 {
-font-size: 16px;
-}
-.card-content p {
-    font-size: 12px;
-    line-height: 0.9rem;
-}
-.card-date p {
-    font-size: 16px;
-}
-.action-btn {
-    max-width: 20px;
-}
+    .card-content h1 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+        line-height: 0.9rem;
+    }
+
+    .text-date {
+        font-size: 16px;
+    }
+
+    .action-btn {
+        max-width: 20px;
+    }
 }
 
 @media screen and (min-width: 750px) {
-#list-card {
-    grid-template-columns: auto;
-    gap: 10px;
-}
-    /* hide action on big screen */
-    .card-action-phone{
-        display: none;
+    #list-card {
+        grid-template-columns: auto;
+        gap: 5px;
     }
-    .card-date h1, .card-date h2{
-        display: block;
-    }
+
     /* card container */
     .card-container {
         flex-direction: row;
     }
+
+    /* hide action on big screen */
+    .card-action-phone {
+        display: none;
+    }
+
+    .card-date h1,
+    .card-date h2 {
+        display: block;
+    }
+
     /* card date container */
     .card-date {
         min-width: 100px;
@@ -136,6 +159,8 @@ font-size: 16px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-right:1px solid #ccc ;
+        border-bottom: none;
     }
 
     .card-date h1 {
@@ -146,7 +171,7 @@ font-size: 16px;
         font-size: 14px;
     }
 
-    .card-date p {
+    .text-date {
         font-weight: 300;
         font-size: 12px;
         color: #7B8DD2;
@@ -154,6 +179,7 @@ font-size: 16px;
 
     /* card container content */
     .card-content {
+        max-height: 200px;
         width: 100%;
         padding: 20px;
         gap: 10px;
