@@ -8,6 +8,8 @@ import './updateModal.js'
 import './viewModal.js'
 //import create entry card function  
 import { createEntryCard } from "../components/entryCard.js";
+// import 'not found data ' section
+import '../components/notFoundData.js';
 
 
 // function for delete data entry
@@ -100,7 +102,7 @@ const displayEntry = () => {
       })
       .join("");
   }else{
-    console.log("noting here")
+    containerListCard.innerHTML=`<not-found-data></not-found-data>`;
   }
 };
 // Render Display all entries in the card list
