@@ -11,6 +11,7 @@
 }
 /* Styles for the input component */
 .input {
+    min-width: 100%;
     transition-duration: 300ms;
     font-size: 12px;
     font-family: "Public Sans", sans-serif;
