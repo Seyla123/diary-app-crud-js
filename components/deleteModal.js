@@ -11,7 +11,7 @@ const createDeleteModal = () =>{
           </div>
          <div class="modal-img-container">
             <img
-            src="./assets/g8.svg"
+            src="./assets/delete.svg"
             alt="Delete Icon"
             class="modal-img"
             />
