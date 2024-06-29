@@ -19,4 +19,5 @@ class Button extends HTMLElement{
 }
 
 // Register the custom element with the browser.
-window.customElements.define('my-button', Button)
+customElements.define('my-button', Button)
+
