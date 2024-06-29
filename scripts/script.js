@@ -8,6 +8,8 @@ import './updateModal.js'
 import './viewModal.js'
 //import create entry card function  
 import { createEntryCard } from "../components/entryCard.js";
+// import 'not found data ' section
+import '../components/notFoundData.js';
 
 
 // function for delete data entry
@@ -91,13 +93,17 @@ form.addEventListener("submit", (e) => {
 const displayEntry = () => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
   let entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
-  entries.reverse();
-  containerListCard.innerHTML = entries
-    .map((item) => {
-      // Create a card element for the current entry and append it to the HTML for the container of card elements.
-      return createEntryCard(item.id, item.title, item.content, item.date);
-    })
-    .join("");
+  if(entries.length > 0){
+    entries.reverse();
+    containerListCard.innerHTML = entries
+      .map((item) => {
+        // Create a card element for the current entry and append it to the HTML for the container of card elements.
+        return createEntryCard(item.id, item.title, item.content, item.date);
+      })
+      .join("");
+  }else{
+    containerListCard.innerHTML=`<not-found-data></not-found-data>`;
+  }
 };
 // Render Display all entries in the card list
 displayEntry();
