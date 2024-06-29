@@ -48,3 +48,4 @@ class Footer extends HTMLElement{
 // Define a custom HTML element for the footer component
 customElements.define("footer-component",Footer)
 
+
