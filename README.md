@@ -34,7 +34,7 @@ The application is designed with a focus on simplicity and ease of use, leveragi
 
 2. Navigate to the project directory:
     ```bash
-    cd crud-diary
+    cd diary-web-app
     ```
 
 3. Open the `index.html` file in your browser to view the project.
