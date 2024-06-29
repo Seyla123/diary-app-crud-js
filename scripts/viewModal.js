@@ -1,6 +1,6 @@
 import { createViewModal } from "../components/viewModal.js";
-document.addEventListener("DOMContentLoaded", () => {
-    // Get all the card elements
+function viewModalFunc(){
+        // Get all the card elements
     const cards = document.querySelectorAll(".content-entry");
 
     // Function to open the view modal
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "auto";
     };
 
-
+    console.log('card length', cards.length);
     // Add event listeners to each card element
     cards.forEach((card) => {
         card.addEventListener("click", (e) => {
@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             openViewModal();
         });
     });
-
     // Add a window.test function to close the view modal
     window.close = closeViewModal;
-})
-
+}
+export { viewModalFunc }
