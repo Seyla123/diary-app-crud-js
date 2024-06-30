@@ -4,8 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 .login-container {
+
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
@@ -15,6 +17,7 @@
     overflow: hidden;
 }
 .login-image{
+    display: none;
     margin: 10px;
     width: 100%;
 }
@@ -90,4 +93,10 @@
 .login-form .links a {
     color: #4285F4;
     text-decoration: none;
+}
+@media screen and (min-width: 750px) {
+    .login-image{
+        display: block;
+    }
+    
 }
