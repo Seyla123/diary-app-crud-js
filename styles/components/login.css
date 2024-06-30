@@ -1,4 +1,5 @@
 .container-section{
+    
     width: 100%;
     height: 100vh;
     display: flex;
@@ -6,8 +7,14 @@
     align-items: center;
     padding: 10px;
 }
+.login-btn{
+    width: 100%;
+    background-color: rgb(69, 63, 63);
+}
 .login-container {
-
+    transition-duration: 500ms;
+    font-size: 12px;
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
@@ -16,10 +23,16 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+.login-container h2{
+    font-size: 20px;
+}
+.login-container p{
+    font-size: 10px;
+}
 .login-image{
-    display: none;
+    transition-duration: 800ms;
     margin: 10px;
-    width: 100%;
+    width: 0px;
 }
 .login-image img {
     border-radius: 10px;
@@ -29,14 +42,15 @@
 }
 
 .login-form {
+    transition-duration: 600ms;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     width: 100%;
     height: 500px;
-    padding: 20px;
+
     max-width: 800px;
 }
 
@@ -49,8 +63,11 @@
 }
 
 .login-form form {
+    width: 100%;
     display: flex;
+    padding: 10px;
     flex-direction: column;
+    gap: 2px;
 }
 
 .login-form label {
@@ -74,15 +91,6 @@
     margin-right: 5px;
 }
 
-.login-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    margin-top: 10px;
-}
 
 
 .login-form .links {
@@ -93,6 +101,17 @@
 @media screen and (min-width: 750px) {
     .login-image{
         display: block;
+        width: 100%;
+    }
+    .login-container h2{
+        font-size: 36px;
+    }
+    .login-container p{
+        font-size: 12px;
+    }
+    .login-form form{
+        gap: 5px;
+        max-width: 325px;
     }
     
 }

@@ -1,8 +1,8 @@
 //This function creates a button element with the given title and type.
 
-const createButton = (title, type,btnType)=>{
+const createButton = (title, type,btnType,customClass)=>{
     return `
-    <button type="${type}" class="${btnType == "primary" ? "btn-primary-100" : "btn"}">${title}</button>
+    <button type="${type}" class="${btnType == "primary" ? "btn-primary-100" : "btn"} ${customClass}">${title}</button>
     `
 }
 
@@ -14,7 +14,8 @@ class Button extends HTMLElement{
         const title = this.getAttribute('title');
         const btnType = this.getAttribute('btn-type');
         const type = this.getAttribute('type') || "";
-        this.innerHTML = createButton(title,type,btnType)
+        const customClass = this.getAttribute('custom-class') || "";
+        this.innerHTML = createButton(title,type,btnType,customClass)
     }
 }
 
