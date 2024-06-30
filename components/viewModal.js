@@ -22,7 +22,7 @@ const createViewModal = (title, content, date) => {
             <h1 class="modal-text-title">
              ${title}
             </h1>
-            <div class="formatted-text">${content}</div>
+            <p class="formatted-text">${content}</p>
           </div>
           <!-- Close Button at Bottom -->
           <div class="modal-container">
