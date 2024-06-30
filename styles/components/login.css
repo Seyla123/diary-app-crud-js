@@ -7,12 +7,14 @@
     align-items: center;
     padding: 10px;
 }
+.container-section *{
+    transition-duration: 500ms;
+}
 .login-btn{
     width: 100%;
     background-color: rgb(69, 63, 63);
 }
 .login-container {
-    transition-duration: 500ms;
     font-size: 12px;
     width: 100%;
     max-width: 1000px;
@@ -24,13 +26,15 @@
     overflow: hidden;
 }
 .login-container h2{
+    
     font-size: 20px;
 }
 .login-container p{
+    
     font-size: 10px;
 }
 .login-image{
-    transition-duration: 800ms;
+    
     margin: 10px;
     width: 0px;
 }
@@ -42,7 +46,7 @@
 }
 
 .login-form {
-    transition-duration: 600ms;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
