@@ -90,10 +90,6 @@
     text-align: center;
 }
 
-.login-form .links a {
-    color: #4285F4;
-    text-decoration: none;
-}
 @media screen and (min-width: 750px) {
     .login-image{
         display: block;
