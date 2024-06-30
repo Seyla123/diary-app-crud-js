@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-image">
+            <img src="../assets/background.jpg" alt="Background Image">
+        </div>
+        <div class="login-form">
+            <h2>Welcome Back</h2>
+            <p>Enter your email and password to access your account.</p>
+            <form id="loginForm">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit">Sign In</button>
+                <div class="links">
+                    <a href="#">Forgot Password?</a>
+                    <p>Don't have an account? <a href="#">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const rememberMe = document.getElementById('rememberMe').checked;
+
+    if (rememberMe) {
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
+    } else {
+        localStorage.removeItem('email');
+        localStorage.removeItem('password');
+    }
+
+    alert('Login successful');
+});
+
+window.addEventListener('load', function() {
+    const storedEmail = localStorage.getItem('email');
+    const storedPassword = localStorage.getItem('password');
+
+    if (storedEmail && storedPassword) {
+        document.getElementById('email').value = storedEmail;
+        document.getElementById('password').value = storedPassword;
+        document.getElementById('rememberMe').checked = true;
+    }
+});
+
+</script>
+</html>

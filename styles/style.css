@@ -25,6 +25,8 @@
 /* import styles for data not found section */
 @import url('./components/data-not-found.css');
 
+/* import styles for login section */
+@import url('./components/login.css');
 
 /* global varaible */
 :root{
