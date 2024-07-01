@@ -28,6 +28,9 @@
 /* import styles for login section */
 @import url('./components/login.css');
 
+/* import styles for navbar */
+@import url('./components/navbar.css');
+
 /* global varaible */
 :root{
     --purple-color : #767AE3;
@@ -62,6 +65,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 /* style for text header */
 .text-header {
@@ -121,7 +125,7 @@ button {
 
 /* Styles for the border */
 .border {
-    border: 1px solid #ccc;
+    border: 1px solid #efefef;
 }
 
 
@@ -161,7 +165,7 @@ button {
     header{
         max-width: 1400px;
         margin: 10px auto;
-        border-radius: 10px;
+
 
     }
 

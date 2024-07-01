@@ -1,10 +1,4 @@
-/* container of list card */
-#list-card {
-    padding: 0 10px;
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 5px;
-}
+
 
 /* card container */
 .card-container {
@@ -14,7 +8,6 @@
     font-size: 12px;
     font-weight: bold;
     color: #244586;
-    border: 1px solid #ccc;
 }
 .content-title-container{
     display: flex;
@@ -26,8 +19,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
-}
+    }
 /* hide h1, h2 on big screen */
 .card-date h1,
 .card-date h2 {

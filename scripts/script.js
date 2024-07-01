@@ -11,8 +11,7 @@ import { createEntryCard } from "../components/entryCard.js";
 // import 'not found data ' section
 import '../components/notFoundData.js';
 import { viewModalFunc } from './viewModal.js';
-
-const isLogined = false;
+const isLogined = true;
 function authorize(){
   if(!isLogined){
     window.location.href = '../pages/login.html';

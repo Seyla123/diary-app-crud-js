@@ -21,7 +21,7 @@ const findDayOfWeek=(dateString)=> {
 const createEntryCard = ( id, title, content, date ) => {
   const dayOfWeek = findDayOfWeek(date);
   return `
-        <div class="container-entry" >
+        <div class="container-entry border" >
           <div class="entry-date-container">
               <h1>${dayNumber}</h1>
               <h2>${dayOfWeek}</h2>
