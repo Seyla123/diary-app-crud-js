@@ -31,7 +31,11 @@
 /* import styles for navbar */
 @import url('./components/navbar.css');
 
+/* import styles for header */
 @import url('./components/header.css');
+
+/* import styles for footer */
+@import url('./components/footer.css');
 /* global varaible */
 :root{
     --purple-color : #767AE3;
@@ -70,33 +74,7 @@ main {
     flex-direction: column;
     gap:10px;
 }
-/* footer */
-footer{
-    width: 100%;
-    margin: 0 auto;
-    background-color: #F9FAFB;
-    border-top: 1px solid var(--border-color);
-}
 
-.footer-title{
-    color: var( --purple-color);
-    font-size: 16px;
-    font-weight: bold;
-}
-.footer-left-container{
-    transition-duration: 300ms;
-    padding: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.footer-left-container ul >li{
-    list-style: none;
-    font-size: 10px;
-    margin: 5px 0;
-    font-weight: bold;
-}
 /* button */
 button {
   background: none;
@@ -122,10 +100,5 @@ button {
     }
     .footer-left-container{
         padding:40px 20px ;
-    }
-}
-@media screen and (min-width: 750px) {
-    .footer-left-container{
-        padding:60px 20px ;
     }
 }
