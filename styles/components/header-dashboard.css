@@ -1,0 +1,19 @@
+.header-dashboard {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+  .header-dashboard h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-new-entry {
+    display: inline-block;
+    background-color: #e638e6;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  }

@@ -1,16 +1,17 @@
+
 const createNavbar = () => {
     return `
     <!-- navbar -->
      <nav>
       <div class="container-nav border">
         <button id="logout-btn">
-          <img src="./assets/logout.png" alt="">
+          <img src="../assets/logout.png" alt="">
           <span>logout</span>
         </button>
         <div class="profile-container">
           <p id="profile-username"></p>
           <button>
-            <img src="./assets/pf.png" alt="profile" />
+            <img src="../assets/pf.png" alt="profile" />
           </button>
         </div>
       </div>

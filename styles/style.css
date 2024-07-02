@@ -33,6 +33,10 @@
 
 /* import styles for footer */
 @import url('./components/footer.css');
+
+/* import styles for dashboard */
+@import url('./components/dashboard.css');
+
 /* global varaible */
 :root{
     --purple-color : #767AE3;
