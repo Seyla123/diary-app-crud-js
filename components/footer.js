@@ -1,6 +1,5 @@
 import { addModalContainer } from "./modelContainer.js";
-// data information
-const info = ['Developed by : Seav Seyla', 'Email : Mrrseyla.758@gmail.com', 'Student ID : AB202410', 'Batch : 02'];
+import { info } from "../data/info.js";
 // add modal container  function
 
 // This function creates the footer

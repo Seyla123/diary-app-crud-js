@@ -1,9 +1,14 @@
+import { quotes } from "../data/quotes.js";
+  //function to generate random quote
+  const getRandomQuote = () => {
+    return quotes[Math.floor(Math.random() * quotes.length)];
+  };
 //function to create header
 const createHeader = ()=>{
     return `
     <header>
         <h1>Diary Application</h1>
-        <p>"A painless lesson is also meaningless"</p>
+        <p>"${getRandomQuote()}"</p>
     </header>
     `
 }
