@@ -7,9 +7,6 @@
 /* Import styles for the input component */
 @import url('./components/input.css');
 
-/* import styles for the card component*/
-@import url('./components/card.css');
-
 /* import styles for the Entry Card */
 @import url('./components/entry-card.css');
 

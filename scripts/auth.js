@@ -38,4 +38,5 @@ const createAcc = (username,password)=>{
     localStorage.setItem("users", JSON.stringify([...userlocal, user]));
     window.location.href = "../pages/login.html";
 }
+
 export {authorize,setLoginStatus,setLogoutStatus,createAcc}
