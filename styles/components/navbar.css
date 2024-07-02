@@ -22,7 +22,12 @@ nav{
     display: flex;
     gap: 10px;
 }
+.container-nav button:hover{
+    transition-duration: 500ms;
+    transform: rotate(1turn);
+}
 .profile-container{
+    
     display: flex;
     justify-content: center;
     align-items: center;
