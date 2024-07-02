@@ -1,10 +1,15 @@
+// import createAcc function from auth.js
 import {createAcc} from './auth.js'
 
 const signUpForm = document.querySelector("#signup-form");
 
+// function for sign form
 signUpForm.addEventListener("submit", (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
 
+    // Prevent the default form submission behavior
+    e.preventDefault(); 
+
+    // get value from sign form
     const userlocal = JSON.parse(localStorage.getItem("users")) || [];
     const username = document.querySelector("#username").value.toLowerCase();
     const password = document.querySelector("#password").value;
