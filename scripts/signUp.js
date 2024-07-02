@@ -20,7 +20,7 @@ signUpForm.addEventListener("submit", (e) => {
     if(userLog){
         createAcc(username,password);
     }else{
-        alert("this account aleady exist. please user other username"); // Display an error message
+        alert("this account aleady exist. please use other username"); // Display an error message
         signUpForm.reset() // Reset the form
     }
 })

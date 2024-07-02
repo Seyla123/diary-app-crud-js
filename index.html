@@ -17,7 +17,8 @@
     <main>
       <!-- form -->
       <form action="/submit" method="post" class="form">
-
+        <!-- id for submit button -->
+        <input type="hidden" name="id" id="id" required />
         <!-- input title -->
         <span>Title :</span>
         <input
@@ -28,7 +29,6 @@
           placeholder="input your title here"
           required
         />
-
         <!-- input content -->
         <span>Content :</span>
         <textarea
@@ -39,7 +39,6 @@
           rows="10"
           required
         ></textarea>
-
         <!-- input date -->
         <input
           class="border input"
@@ -48,7 +47,6 @@
           id="date"
           required
         />
-        
         <!--submit button -->
         <div class="container-btn">
           <my-button
