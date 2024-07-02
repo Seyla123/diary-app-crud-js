@@ -1,8 +1,9 @@
 //function to create header
 const createHeader = ()=>{
     return `
-    <header class="text-header container">
-        <p>Diary Application</p>
+    <header>
+        <h1>Diary Application</h1>
+        <p>"A painless lesson is also meaningless"</p>
     </header>
     `
 }

@@ -61,19 +61,23 @@ body {
 /* header */
 header {
     background-image: url('../assets/background.jpg');
-    padding:70px 0px ;
+    padding:60px 0px ;
     margin: 0px 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-}
-/* style for text header */
-.text-header {
     transition-duration: 500ms;
     color: #F9FAFB;
     font-size: 18px;
     font-weight: bold;
+    gap: 10px;
+}
+/* style for text header */
+header p{
+    font-size: 12px;
+    font-weight: normal;
 }
 
 /* main section */
@@ -153,6 +157,7 @@ button {
 @media screen and (min-width: 750px) {
     header{
         padding:150px 0 ;
+        gap: 20px;
     }
     /* Styles for the header text */
     .text-header {
@@ -166,7 +171,6 @@ button {
     header{
         max-width: 1400px;
         margin: 10px auto;
-
 
     }
 
