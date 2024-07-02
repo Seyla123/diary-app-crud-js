@@ -86,10 +86,4 @@ main {
     body ,main{
         gap:20px;
     }
-    .footer-left-container ul >li{
-        font-size: 12px;
-    }
-    .footer-left-container{
-        padding:40px 20px ;
-    }
 }

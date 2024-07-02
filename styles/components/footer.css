@@ -25,6 +25,15 @@ footer{
     margin: 5px 0;
     font-weight: bold;
 }
+/* responsive for screen bigger than 430px */
+@media screen and (min-width: 430px) {
+    .footer-left-container ul >li{
+        font-size: 12px;
+    }
+    .footer-left-container{
+        padding:40px 20px ;
+    }
+}
 @media screen and (min-width: 750px) {
     .footer-left-container{
         padding:60px 20px ;
