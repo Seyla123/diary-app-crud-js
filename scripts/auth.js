@@ -7,7 +7,10 @@ const authorize = () => {
     const isLogined = JSON.parse(localStorage.getItem("isLogined")) || false;
     console.log('auth : ', isLogined);
   if(!isLogined){
-    window.location.href = '../pages/login.html';
+    setTimeout(() => {
+        alert("Please Login");
+        window.location.href = '../pages/login.html';
+    },1000)
   }
 }
 

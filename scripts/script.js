@@ -13,9 +13,13 @@ import '../components/notFoundData.js';
 import { viewModalFunc } from './viewModal.js';
 
 // import authorize function
-import { authorize } from './auth.js'
+import { authorize,setLogoutStatus } from './auth.js'
 authorize();
 
+const logoutBtn = document.querySelector("#logout-btn");
+logoutBtn.addEventListener("click", () => {
+  setLogoutStatus();
+})
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
