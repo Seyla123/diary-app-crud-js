@@ -37,7 +37,6 @@
     font-size: 20px;
 }
 .login-container p{
-    
     font-size: 10px;
 }
 .login-image{
@@ -81,15 +80,9 @@
 .login-form label {
     margin-bottom: 5px;
 }
-
-.login-form input[type="email"],
-.login-form input[type="password"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.login-form input{
+    font-size: 12px;
 }
-
 .login-form .remember-me {
     display: flex;
     align-items: center;
