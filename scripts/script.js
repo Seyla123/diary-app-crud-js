@@ -15,6 +15,9 @@ import { viewModalFunc } from './viewModal.js';
 // import authorize function
 import { authorize,setLogoutStatus } from './auth.js'
 authorize();
+const userLogined = JSON.parse(localStorage.getItem("isLogined"));
+const profileUsername = document.querySelector("#profile-username");
+profileUsername.innerHTML = userLogined;
 
 const logoutBtn = document.querySelector("#logout-btn");
 logoutBtn.addEventListener("click", () => {

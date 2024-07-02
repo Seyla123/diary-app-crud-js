@@ -5,13 +5,12 @@
  */
 const authorize = () => {
     const isLogined = JSON.parse(localStorage.getItem("isLogined")) || false;
-    console.log('auth : ', isLogined);
-  if(!isLogined){
-    setTimeout(() => {
-        alert("Please Login");
-        window.location.href = '../pages/login.html';
-    },1000)
-  }
+    if(!isLogined){
+        setTimeout(() => {
+            alert("Please Login");
+            window.location.href = '../pages/login.html';
+        },1000)
+    }
 }
 
 /**
@@ -20,7 +19,6 @@ const authorize = () => {
  */
 const setLoginStatus = (username) =>{
     localStorage.setItem("isLogined", JSON.stringify(username));
-
     authorize();
 }
 
@@ -30,7 +28,14 @@ const setLoginStatus = (username) =>{
  */
 const setLogoutStatus = () =>{
     localStorage.removeItem('isLogined');
-    authorize();
+    window.location.href = '../pages/login.html';
 }
 
-export {authorize,setLoginStatus,setLogoutStatus}
+// function create account user
+const createAcc = (username,password)=>{
+    const userlocal = JSON.parse(localStorage.getItem("users")) || [];
+    const user = {id:userlocal.length, username, password};
+    localStorage.setItem("users", JSON.stringify([...userlocal, user]));
+    window.location.href = "../pages/login.html";
+}
+export {authorize,setLoginStatus,setLogoutStatus,createAcc}
