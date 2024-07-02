@@ -25,10 +25,19 @@ footer{
     margin: 5px 0;
     font-weight: bold;
 }
+/* Footer styles */
+.copy-right {
+font-size: 10px;
+  padding: 1rem;
+  text-align: center;
+}
 /* responsive for screen bigger than 430px */
 @media screen and (min-width: 430px) {
     .footer-left-container ul >li{
         font-size: 12px;
+    }
+    .copy-right{
+        font-size:12px;
     }
     .footer-left-container{
         padding:40px 20px ;

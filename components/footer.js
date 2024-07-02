@@ -16,6 +16,9 @@ const createFooter = ()=>{
                 ${info.map((info)=>`<li>${info}</li>`).join('')}
             </ul>
         </div>
+        <div class="copy-right">
+        <p>&copy; 2024 Seav Seyla. All rights reserved.</p>
+        </div>
     </footer>
     `
 }

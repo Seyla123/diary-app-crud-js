@@ -1,6 +1,6 @@
 // quotes information
 const quotes = [
-    "The greatest glory in living lies not in never falling, but in rising every time we fall.",	
+    "The greatest glory in living lies not in never falling,<br/> but in rising every time we fall.",	
     "The way to get started is to quit talking and begin doing.",
     "A painless lesson is also meaningless",
     "Growth blooms from the soil of struggle.",
