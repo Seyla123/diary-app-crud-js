@@ -3,13 +3,13 @@ import {createAcc} from './auth.js'
 
 const signUpForm = document.querySelector("#signup-form");
 
-// function for sign form
+// event submit for sign form
 signUpForm.addEventListener("submit", (e) => {
 
     // Prevent the default form submission behavior
     e.preventDefault(); 
 
-    // get value from sign form
+    // get value from form
     const userlocal = JSON.parse(localStorage.getItem("users")) || [];
     const username = document.querySelector("#username").value.toLowerCase();
     const password = document.querySelector("#password").value;
