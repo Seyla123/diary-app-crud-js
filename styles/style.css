@@ -47,6 +47,7 @@
     --border-color :#ccc;
     --red-color : #E31B54;
     --red-color-danger : #C01048;
+    --text-black : #333;
 }
 /* Reset some default browser styles */
 * {

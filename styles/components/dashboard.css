@@ -1,1 +1,76 @@
-@import url('./header-dashboard.css')
+@import url('./header-dashboard.css');
+
+/* main dashboard */
+.main-dashboard{
+    margin: 0px 10px;
+}
+
+/* dashboard Card Styles */
+.dashboard-card {
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
+/* img containter */
+  .dashboard-card-imge-container {
+    background-color: var(--purple-color);
+    border-radius: 50%;
+    color: #fff;
+    max-width: 80px;
+    padding: 10px;
+}
+  .dashboard-card-imge-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* card title */
+  .dashboard-card-title {
+    color: var(--text-black);
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  /* card value */
+  .dashboard-card-value {
+    color: var(--purple-color);
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 750px) {
+    .dashboard-card {
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+    }
+    .dashboard-card-imge-container{
+        max-width: 100px;
+    }
+  }
+@media screen and (min-width: 1400px) {
+    .main-dashboard{
+        width: 100%;
+        max-width: 1400px;
+        margin: 0px auto;
+    } 
+}
