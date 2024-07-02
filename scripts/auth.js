@@ -3,7 +3,7 @@
  * This function checks if the user is logged in.
  * If the user is not logged in, it redirects them to the login page.
  */
-function authorize(){
+const authorize = () => {
     const isLogined = JSON.parse(localStorage.getItem("isLogined")) || false;
     console.log('auth : ', isLogined);
   if(!isLogined){
@@ -15,8 +15,9 @@ function authorize(){
  * This function sets the user as logged in.
  * It calls the authorize function to check if the user is logged in.
  */
-function setLoginStatus(username){
+const setLoginStatus = (username) =>{
     localStorage.setItem("isLogined", JSON.stringify(username));
+
     authorize();
 }
 
@@ -24,8 +25,9 @@ function setLoginStatus(username){
  * This function sets the user as logged out.
  * It calls the authorize function to check if the user is logged in.
  */
-function setLogoutStatus(){
+const setLogoutStatus = () =>{
     localStorage.removeItem('isLogined');
-    window.location.href = '../'
     authorize();
 }
+
+export {authorize,setLoginStatus,setLogoutStatus}
