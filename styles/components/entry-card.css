@@ -25,6 +25,8 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+.container-entry:hover {
+    transform: translateY(-10px);
 /* container date for desktop screen*/
 .entry-date-container{
     color:var(--purple-color);
