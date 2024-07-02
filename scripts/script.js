@@ -11,13 +11,11 @@ import { createEntryCard } from "../components/entryCard.js";
 // import 'not found data ' section
 import '../components/notFoundData.js';
 import { viewModalFunc } from './viewModal.js';
-const isLogined = false;
-function authorize(){
-  if(!isLogined){
-    window.location.href = '../pages/login.html';
-  }
-}
-authorize()
+
+import './auth.js';
+
+// authorize
+authorize();
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.
