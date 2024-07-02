@@ -31,6 +31,7 @@
 /* import styles for navbar */
 @import url('./components/navbar.css');
 
+@import url('./components/header.css');
 /* global varaible */
 :root{
     --purple-color : #767AE3;
@@ -57,27 +58,6 @@ body {
     background-color: var(--purple-color-light);
     flex-direction: column;
     gap: 10px;
-}
-/* header */
-header {
-    background-image: url('../assets/background.jpg');
-    padding:60px 0px ;
-    margin: 0px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition-duration: 500ms;
-    color: #F9FAFB;
-    font-size: 18px;
-    font-weight: bold;
-    gap: 10px;
-}
-/* style for text header */
-header p{
-    font-size: 12px;
-    font-weight: normal;
 }
 
 /* main section */
@@ -132,20 +112,10 @@ button {
 .border {
     border: 1px solid #efefef;
 }
-
-
 /* responsive for screen bigger than 430px */
 @media screen and (min-width: 430px) {
     body ,main{
         gap:20px;
-    }
-       /* Styles for the header */
-    header{
-        padding:100px 0 ;
-    }
-    /* Styles for the header text */
-    .text-header {
-        font-size: 32px;
     }
     .footer-left-container ul >li{
         font-size: 12px;
@@ -155,24 +125,7 @@ button {
     }
 }
 @media screen and (min-width: 750px) {
-    header{
-        padding:150px 0 ;
-        gap: 20px;
-    }
-    /* Styles for the header text */
-    .text-header {
-            font-size: 38px;
-    }
     .footer-left-container{
         padding:60px 20px ;
     }
-}
-@media screen and (min-width: 1400px) {
-    header{
-        max-width: 1400px;
-        margin: 10px auto;
-
-    }
-
-    
 }
