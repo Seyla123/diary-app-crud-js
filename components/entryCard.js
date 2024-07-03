@@ -27,7 +27,7 @@ const createEntryCard = ( id, title, content, date ) => {
               <h2>${dayOfWeek}</h2>
               <p>${date}</p>
           </div>
-          <div class="content-entry" id="${id}">
+          <div class="content-entry card-view-modal" id="${id}">
           
             <div class="container-title">
               <h3 class="entry-title">

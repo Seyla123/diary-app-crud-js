@@ -4,6 +4,7 @@
 
 /* main dashboard */
 .main-dashboard{
+    flex: 1;
     margin: 0px 10px;
 }
 

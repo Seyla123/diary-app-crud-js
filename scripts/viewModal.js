@@ -1,7 +1,7 @@
 import { createViewModal } from "../components/viewModal.js";
 function viewModalFunc(){
         // Get all the card elements
-    const cards = document.querySelectorAll(".content-entry");
+    const cards = document.querySelectorAll(".card-view-modal");
 
     // Function to open the view modal
     const openViewModal = () => {

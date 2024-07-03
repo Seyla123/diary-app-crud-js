@@ -1,5 +1,6 @@
 import { createRecentEntry } from "../components/recentEntry.js";
 import { authorize } from "./auth.js";
+import { viewModalFunc } from "./viewModal.js";
 authorize();
 
 // function for display data entry
