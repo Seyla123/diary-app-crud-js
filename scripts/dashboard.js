@@ -22,3 +22,7 @@ const recentEntry = () => {
     }
   };
   recentEntry()
+  const entriesCount = document.querySelector("#total-entries");
+  entriesCount.textContent = "10"
+    const userCount = document.querySelector("#total-users");
+  userCount.textContent = "10"
