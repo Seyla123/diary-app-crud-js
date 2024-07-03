@@ -11,7 +11,11 @@ const recentEntry = () => {
     if(entries.length > 0){
       entries.reverse();
       containerRecentEntry.innerHTML = entries
-        .map((item) => {
+        .map((item,index) => {
+          // limited only 8 card
+          if(index > 7){
+            return;
+          }
           // Create a card element for the current entry and append it to the HTML for the container of card elements.
           return createRecentEntry(item.id, item.title, item.content, item.date);
         })
@@ -22,7 +26,11 @@ const recentEntry = () => {
     }
   };
   recentEntry()
+
+  const entries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
   const entriesCount = document.querySelector("#total-entries");
-  entriesCount.textContent = "10"
+  entriesCount.textContent = entries.length
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
     const userCount = document.querySelector("#total-users");
-  userCount.textContent = "10"
+  userCount.textContent = users.length

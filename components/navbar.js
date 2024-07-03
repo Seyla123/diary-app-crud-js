@@ -1,4 +1,4 @@
-
+import { setLogoutStatus } from "../scripts/auth.js";
 const createNavbar = () => {
     return `
     <!-- navbar -->
@@ -24,7 +24,14 @@ class Navbar extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = createNavbar()
+        this.innerHTML = createNavbar();
+        this.setUpEvent();
     }
+    setUpEvent(){
+      const logoutBtn = this.querySelector("#logout-btn");
+      logoutBtn.addEventListener("click", () => {
+      setLogoutStatus();
+      })
+  }
 }
 window.customElements.define('navbar-component', Navbar)
