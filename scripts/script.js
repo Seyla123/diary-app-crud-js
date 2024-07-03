@@ -20,11 +20,6 @@ import { authorize } from './auth.js'
 // call the authorize function
 authorize();
 
-// get username login and display
-const userLogined = JSON.parse(localStorage.getItem("isLogined"));
-const profileUsername = document.querySelector("#profile-username");
-profileUsername.innerHTML = userLogined;
-
 // function for delete data entry
 const deleteEntry = (id) => {
   // Retrieve the array of entries from local storage, or create an empty array if no entries exist.

@@ -32,6 +32,10 @@ class Navbar extends HTMLElement {
       logoutBtn.addEventListener("click", () => {
       setLogoutStatus();
       })
+            // get username login and display
+      const userLogined = JSON.parse(localStorage.getItem("isLogined"));
+      const profileUsername = document.querySelector("#profile-username");
+      profileUsername.innerHTML = userLogined;
   }
 }
 window.customElements.define('navbar-component', Navbar)
