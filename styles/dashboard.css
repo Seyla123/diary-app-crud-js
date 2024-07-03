@@ -5,7 +5,16 @@
 /* main dashboard */
 .main-dashboard{
     flex: 1;
+    display: flex;
+    gap: 20px;
+    flex-direction:column;
     margin: 0px 10px;
+}
+.dashboard-title {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 /* dashboard Card Styles */
@@ -73,4 +82,8 @@
         max-width: 1400px;
         margin: 0px auto;
     } 
+    .dashboard-title  {
+      font-size: 36px;
+      margin-bottom:20px;
+    }
 }

@@ -5,12 +5,7 @@
     grid-gap: 10px;
   }
 
-.recent-entries h2 {
-  color: #2c3e50;
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-}
+
 
 .entry-card {
   text-align: center;
@@ -58,15 +53,5 @@
   .recent-entries .recent-entries-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-
-@media (min-width: 1400px) {
-  .recent-entries {
-    margin-top: 3rem;
-  }
-
-  .recent-entries h2 {
-    font-size: 2rem;
   }
 }
