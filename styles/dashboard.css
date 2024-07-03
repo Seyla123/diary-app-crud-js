@@ -1,5 +1,7 @@
-@import url('./header-dashboard.css');
-@import url('./dashbaord-entry-card.css');
+@import url('./components/header-dashboard.css');
+@import url('./components/dashbaord-entry-card.css');
+
+
 /* main dashboard */
 .main-dashboard{
     margin: 0px 10px;
@@ -21,10 +23,6 @@
 
 .dashboard-card:hover {
     transform: translateY(-10px);
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    -o-transform: translateY(-10px);
 }
 
 /* img containter */

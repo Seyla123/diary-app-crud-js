@@ -5,28 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diary Dashboard</title>
   <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/dashboard.css">
 </head>
 <body>
   <!-- navbar -->
     <navbar-component></navbar-component>
-    
-  <!-- header section -->
-    <header class="header-dashboard">
+     <!-- header -->
+    <header-component
+      header-title="Diary Application Dashboard"
+      btn-title="Add Entry"
+      url-btn="../index.html"
+      custom-header="header-dashboard"
+      custom-btn="btn-new-entry"
+    ></header-component>
 
-      <!-- header title -->
-      <h1>Welcome to your Diary</h1>
-      <p>Start writing your thoughts and feelings today.</p>
-      <!-- button to go to new entry index.html page -->
-      <a href="../index.html" >
-        <my-button 
-          title="New Entry"
-          type="button"
-          custom-class="btn-new-entry"
-          >
-        </my-button>
-      </a>
-
-    </header>
 
     <section class="main-dashboard">
           <div class="dashboard-card border">
@@ -40,37 +32,21 @@
           </div>
           <section class="recent-entries">
             <h2>Recent Entries</h2>
-            <div class="container">
-              <div class="entry-card border">
-                <div class="entry-card-content">
-                  <h3 class="entry-card-title">${title}</h3>
-                  <p class="entry-card-date">${date}</p>
-                  <p class="entry-card-text">${content}</p>
-                </div>
-              </div>
-              <div class="entry-card border">
-                <div class="entry-card-content">
-                  <h3 class="entry-card-title">${title}</h3>
-                  <p class="entry-card-date">${date}</p>
-                  <p class="entry-card-text">${content}</p>
-                </div>
-              </div>
-              <div class="entry-card border">
-                <div class="entry-card-content">
-                  <h3 class="entry-card-title">${title}</h3>
-                  <p class="entry-card-date">${date}</p>
-                  <p class="entry-card-text">${content}</p>
-                </div>
-              </div>
-          </div>
+            <div class="recent-entries-container">
+              
+            </div>
           </section>
     </section> 
     <footer-component></footer-component>
 </body>
+<!-- header link -->
+<script type="module" src="../components/header.js"></script>
 <!-- button link -->
 <script src="../components/button.js"></script>
 <!-- navbar link -->
 <script src="../components/navbar.js"></script>
 <!-- footer link -->
 <script type="module" src="../components/footer.js"></script>
+<!-- dashboard link -->
+ <script type="module" src="../scripts/dashboard.js"></script>
 </html>

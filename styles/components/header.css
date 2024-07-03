@@ -33,7 +33,7 @@ header p{
 @media screen and (min-width: 750px) {
     header{
         font-size: 36px;
-        padding:150px 0 ;
+        padding:140px 0 ;
         gap: 20px;
     }
 
