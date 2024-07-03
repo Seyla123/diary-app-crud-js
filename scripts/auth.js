@@ -20,6 +20,7 @@ const authorize = () => {
 const setLoginStatus = (username) =>{
     localStorage.setItem("isLogined", JSON.stringify(username));
     authorize();
+    
 }
 
 /**

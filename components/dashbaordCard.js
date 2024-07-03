@@ -1,6 +1,6 @@
 const createDashboardCard = (logoIcon, logoTitle, title,url, countId,customImgContainter) => {
     return `
-        <a href="${url}">
+        <a ${url ? `href="${url}"` : ""}>
         <div class="dashboard-card border">
           <div class="dashboard-card-imge-container ${customImgContainter}">
             <img src="${logoIcon}" alt="${logoTitle}">
@@ -30,4 +30,5 @@ class DashboardCard extends HTMLElement {
         this.innerHTML = createDashboardCard(logoIcon, logoTitle, title,url, countId,customImgContainter);
     }
 }
+
 customElements.define("dashboard-card", DashboardCard)
