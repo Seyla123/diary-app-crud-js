@@ -1,6 +1,5 @@
 /* Styles for the form */
 .form {
-    padding: 0 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
