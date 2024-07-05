@@ -9,8 +9,14 @@
     <link rel="icon" href="./assets/diary-logo.png" type="image/x-icon" />
   </head>
   <body>
+    <!-- navbar -->
+    <navbar-component></navbar-component>
     <!-- header -->
-    <header-component></header-component>
+    <header-component
+      header-title="Diary Application"
+      btn-title="Your Diary"
+      url-btn="../pages/dashboard.html"
+    ></header-component>
     <!-- main -->
     <main>
       <!-- form -->
@@ -66,8 +72,10 @@
     <!-- footer -->
     <footer-component></footer-component>
   </body>
+  <!-- navbar link -->
+   <script type="module" src="./components/navbar.js"></script>
   <!-- header link -->
-  <script src="./components/header.js"></script>
+  <script type="module" src="./components/header.js"></script>
   <!-- footer link -->
   <script type="module" src="./components/footer.js"></script>
   <!-- button link -->

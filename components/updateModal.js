@@ -1,6 +1,6 @@
 // function for create update modal
 import { closeIcon } from "./closeIcon.js";
-const createUpdateModal = (entry) => {
+const createUpdateModal = () => {
     return `
      <div id="updateModal" class="modal-update">
           <div class="modal-content">

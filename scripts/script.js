@@ -2,15 +2,23 @@
 import '../components/updateModal.js';
 import '../components/deleteModal.js';
 import '../components/viewModal.js';
+
 // import script for delete , update , view modal
 import './deleleModal.js'
 import './updateModal.js'
-import './viewModal.js'
+import { viewModalFunc } from './viewModal.js';
+
 //import create entry card function  
 import { createEntryCard } from "../components/entryCard.js";
+
 // import 'not found data ' section
 import '../components/notFoundData.js';
-import { viewModalFunc } from './viewModal.js';
+
+// import authorize function
+import { authorize } from './auth.js'
+
+// call the authorize function
+authorize();
 
 // function for delete data entry
 const deleteEntry = (id) => {
