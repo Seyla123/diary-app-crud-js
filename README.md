@@ -1,6 +1,6 @@
-# CRUD Diary Application
+# CRUD Diary Application (Basic Javascript)
 
-This project is a web-based diary application offering a simple yet powerful interface for managing daily entries. Users can create, view, edit, and delete their diary notes. Additionally, the application now includes a user authentication system and a dashboard for a comprehensive overview of entries.
+This project is a web-based diary application offering a simple,  interface for managing daily entries. Users can create, view, edit, and delete their diary notes.
 
 ## Table of Contents
 
